@@ -39,6 +39,8 @@
     }
 
     .page {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #000000;
       position: relative;
       width: 595.3pt;
       height: 841.9pt;
@@ -71,7 +73,7 @@
 
     #container-heading4 {
       position: absolute;
-      left: 330.55pt;
+      left: 337.55pt;
       top: 21.7pt;
       width: 40pt;
       height: 24pt;
@@ -80,7 +82,7 @@
     #naw {
       position: absolute;
       left: 70pt;
-      top: 90pt;
+      top: 100pt;
       width: 300pt;
       height: 60pt;
       line-height: 1em;
@@ -88,83 +90,133 @@
 
     .berekening {
       position: absolute;
-      left: 64pt;
-      width: 480pt;
-      height: 300pt;
+      height: auto;
       line-height: 1.3em;
+      left: 63pt;
+      width: 420pt;
+      border-left: black solid 1pt;
+    }
+
+    .berekening > * {
+      position: relative;
+      left: 7pt;
     }
 
     .bericht {
       position: absolute;
       left: 70pt;
       width: 480pt;
-      line-height: 1.3em
     }
 
-    .cs1 {
-      font: 8pt 'Arial';
-      color: #000000;
-      position: absolute;
+    .text-smallest {
+      font-size: 8pt;
       white-space: pre;
+      letter-spacing: 0.25pt;
     }
 
-    .cs2 {
-      font: 9pt 'Arial';
-      color: #000000;
-      position: absolute;
+    .text-small {
+      font-size: 9pt;
       white-space: pre;
+      letter-spacing: 0.25pt;
     }
 
-    .cs3 {
-      font: 9.5pt 'Arial';
-      color: #000000;
-      position: absolute;
-      white-space: pre;
+    .text-normal {
+      font-size: 9.5pt;
+      letter-spacing: 0.15pt;
+      line-height: 1.4;
     }
 
-    .cs4 {
-      font: 9.5pt 'Arial';
-      color: #000000;
-      position: absolute;
+    .paragraph-header {
+      font-size: 9.5pt;
       white-space: pre;
       font-weight: bold;
+      letter-spacing: 0.2pt;
     }
 
-    .cs5 {
-      font: 9.5pt 'Arial';
-      color: #000000;
-      font-style: italic;
+    .text-normal + .paragraph-header {
+      margin-top: 1em;
     }
 
-    .cs6 {
-      font: 12pt 'Arial';
-      color: #000000;
+    .info-title {
+      font-size: 12pt;
       font-weight: bold;
       position: absolute;
-      white-space: pre;
+      letter-spacing: 0.2pt;
     }
 
-    .cs7 {
-      font: 12pt 'Arial';
-      color: #000000;
+    .info-subtitle {
+      font-size: 13pt;
       position: absolute;
-      white-space: pre;
+      letter-spacing: 0.2pt;
     }
 
-    .cs8 {
-      font: 16pt 'Arial';
+    .document-title {
+      font-size: 16pt;
       color: #FF0000;
       font-weight: bold;
       position: absolute;
       white-space: pre;
+      letter-spacing: 0.15pt
     }
 
-    .cs9 {
-      font: 11pt 'Arial';
+    .document-subtitle {
+      font-size: 11pt;
       color: #FF0000;
       font-style: italic;
       position: absolute;
       white-space: pre;
+      letter-spacing: 0.15pt
+    }
+
+    .document-info {
+      position: absolute;
+      width: 100pt;
+      height: 24pt;
+      border-left: black solid 1pt;
+    }
+
+    .document-info > * {
+      position: absolute;
+      left: 7pt;
+    }
+
+    .document-year {
+      position: absolute;
+      width: 100pt;
+      height: 29pt;
+    }
+
+    .page-info {
+      position: absolute;
+      height: 100%;
+      width: 90pt;
+      border-left: black solid 1pt;
+    }
+
+    .page-info > * {
+      position: absolute;
+      left: 4pt;
+    }
+
+    .chapter-header {
+      font-size: 11pt;
+      position: relative;
+      font-weight: bold;
+      letter-spacing: 0.15pt;
+    }
+
+    .arrow {
+      position: absolute;
+      font-size: 1.5em;
+      font-weight: lighter;
+    }
+
+    .uppercase {
+      text-transform: uppercase;
+    }
+
+    .emphasis {
+      font-style: italic;
     }
   </style>
 </head>
@@ -172,115 +224,87 @@
 <!-- Pagina 1 -->
 <div class="page" >
   <div class="container-heading1" >
-    <div class="cs8" style="letter-spacing:0.15pt">Toeslagen</div>
-    <div class="cs9" style="top: 20.35pt; letter-spacing:0.15pt">Belastingdienst</div>
-    <div class="cs6" style="top:43.1pt;">&gt;</div>
-    <div class="cs1" style="top:47.5pt; left: 13.8pt; letter-spacing:0.25pt; position: absolute;">Postbus 4510, 6401 JA Heerlen</div>
+    <div class="document-title">Toeslagen</div>
+    <div class="document-subtitle" style="top: 20.35pt">Belastingdienst</div>
+    <div class="arrow" style="top:44pt;">&gt;</div>
+    <div class="text-smallest" style="top:50pt; left: 12.8pt; position: absolute;">Postbus 4510, 6401 JA Heerlen</div>
   </div>
   <div id="container-heading2">
-    <div style="position:absolute; width: 100pt;height: 29pt; border-left:black solid 1pt">
-      <div class="cs6" style="left: 7pt; top: 1pt; letter-spacing:0.2pt">Voorschotbeschikking</div>
-      <div class="cs7" style="left: 7pt; top: 15pt; letter-spacing:0.2pt">Toeslagen</div>
+    <div class="document-info">
+      <div class="info-title">Voorschotbeschikking</div>
+      <div class="info-subtitle" style="top: 14pt">Toeslagen</div>
     </div>
-    <div style="position:absolute; top: 77pt; width: 100pt;height: 21pt; border-left:black solid 1pt">
-      <div class="cs1" style="left: 7pt; letter-spacing:0.25pt">Internet</div>
-      <div class="cs2" style="left: 7pt; top:10pt; letter-spacing:0.2pt">toeslagen.nl</div>
+    <div class="document-info" style="top: 50pt;">
+      <div class="text-smallest" style="top: 5pt">Internet</div>
+      <div class="text-small" style="top: 15pt">toeslagen.nl</div>
     </div>
-    <div style="position:absolute; top: 111pt; width: 100pt;height: 21pt; border-left:black solid 1pt">
-      <div class="cs1" style="left: 7pt; letter-spacing:0.25pt">Kenmerk</div>
-      <div class="cs2" style="left: 7pt; top: 10pt; letter-spacing:0.25pt"><ix:nonNumeric contextRef='CD_Algemeen' name='bd-i-ext2:MessageAttribute'>7810.05.553.T.SC.20.2</ix:nonNumeric></div>
+    <div class="document-info" style="top: 84pt;">
+      <div class="text-smallest" style="top: 5pt">Kenmerk</div>
+      <div class="text-small" style="top: 15pt"><ix:nonNumeric contextRef='CD_Algemeen' name='bd-i-ext2:MessageAttribute'>7810.05.553.T.SC.20.2</ix:nonNumeric></div>
     </div>
-    <div style="position:absolute; top: 147pt; width: 100pt;height: 21pt; border-left:black solid 1pt">
-      <div class="cs1" style="left: 7pt; letter-spacing:0.15pt">Datum</div>
-      <div class="cs2" style="left: 7pt; top: 10pt; letter-spacing:0.25pt"><ix:nonNumeric contextRef='CD_Algemeen' format='ixt:dateDayMonthnameYearNlType' name='bd-i:NoticeOfAssessmentDate'>6 maart 2020</ix:nonNumeric></div>
+    <div class="document-info" style="top: 118pt;">
+      <div class="text-smallest" style="top: 5pt">Datum</div>
+      <div class="text-small" style="top: 15pt"><ix:nonNumeric contextRef='CD_Algemeen' format='ixt:dateDayMonthnameYearNlType' name='bd-i:NoticeOfAssessmentDate'>6 maart 2020</ix:nonNumeric></div>
     </div>
   </div>
   <div id="container-heading4">
-    <div style="position:absolute; width: 100pt;height: 29pt;">
-      <div class="cs6" style="left: 7pt; top: 1pt; letter-spacing:0.2pt"><ix:nonNumeric contextRef='CD_Algemeen' name='bd-i-ext2:AllowanceYear' decimals="INF" >2020</ix:nonNumeric></div>
+    <div class="document-year">
+      <div class="info-title"><ix:nonNumeric contextRef='CD_Algemeen' name='bd-i-ext2:AllowanceYear' decimals="INF" >2020</ix:nonNumeric></div>
     </div>
   </div>
   <div id="naw">
-    <p class="cs3"><ix:nonNumeric contextRef='CD_Declarant' name='bd-i:Surname'>A F-OUT-HR-KI-KO-ZO-07-A001-01</ix:nonNumeric></p>
-    <br />
-    <p class="cs3" style="letter-spacing:0.25pt"><ix:nonNumeric contextRef='CD_Declarant_RentAllowance001' name='bd-i:StreetNameNL' tupleRef='T8' order='1'>Kalverstraat</ix:nonNumeric> <ix:nonNumeric contextRef='CD_Declarant_RentAllowance001' name='bd-i:HouseNumberNL' tupleRef='T8' order='1'>211</ix:nonNumeric></p>
-    <br />
-    <p class="cs3" style="letter-spacing:0.2pt"><ix:nonNumeric contextRef='CD_Declarant_RentAllowance001' name='bd-i:PostalCodeNL' tupleRef='T8' order='1'>1012XC</ix:nonNumeric> <ix:nonNumeric contextRef='CD_Declarant_RentAllowance001' name='bd-i:PlaceOfResidenceNL' tupleRef='T8' order='1'>Amsterdam</ix:nonNumeric></p>
+    <div class="text-normal uppercase"><ix:nonNumeric contextRef='CD_Declarant' name='bd-i:Surname'>A F-OUT-HR-KI-KO-ZO-07-A001-01</ix:nonNumeric></div>
+    <div class="text-normal uppercase"><ix:nonNumeric contextRef='CD_Declarant_RentAllowance001' name='bd-i:StreetNameNL' tupleRef='T8' order='1'>Kalverstraat</ix:nonNumeric> <ix:nonNumeric contextRef='CD_Declarant_RentAllowance001' name='bd-i:HouseNumberNL' tupleRef='T8' order='1'>211</ix:nonNumeric></div>
+    <div class="text-normal uppercase"><ix:nonNumeric contextRef='CD_Declarant_RentAllowance001' name='bd-i:PostalCodeNL' tupleRef='T8' order='1'>1012XC</ix:nonNumeric> <ix:nonNumeric contextRef='CD_Declarant_RentAllowance001' name='bd-i:PlaceOfResidenceNL' tupleRef='T8' order='1'>Amsterdam</ix:nonNumeric></div>
   </div>
-  <div class="bericht" style="top:248pt; height: 20pt;">
-    <p class="cs4" style="letter-spacing:0.15pt">Wij hebben uw toeslag(en) voor <ix:nonNumeric contextRef='CD_Algemeen' name='bd-i-ext2:AllowanceYear'>2020</ix:nonNumeric> (opnieuw) berekend.</p>
-    <br /><br />
+  <div class="bericht" style="top:248pt;">
+    <div class="paragraph-header">Wij hebben uw toeslag(en) voor <ix:nonNumeric contextRef='CD_Algemeen' name='bd-i-ext2:AllowanceYear'>2020</ix:nonNumeric> (opnieuw) berekend.</div>
   </div>
-  <div class="berekening" style="left: 63pt; top: 290pt; height: 240pt; width: 420pt; border-left: black solid 1pt" >
-    <p class="cs4" style="left: 7pt; letter-spacing:0.15pt">Uw zorgtoeslag voor <ix:nonNumeric contextRef='CD_Algemeen' name='bd-i-ext2:AllowanceYear'>2020</ix:nonNumeric> wordt &euro;<ix:nonNumeric contextRef='CD_Declarant_CareAllowance' name='bd-i-ext2:DisposalYearAmount' decimals="INF" unitRef="EUR" >550</ix:nonNumeric>.</p>
-    <br />
-    <p class="cs3" style="left: 7pt; letter-spacing:0.15pt">Wij hebben uw zorgtoeslag berekend voor de periode vanaf <ix:nonNumeric contextRef='CD_Declarant_CareAllowance' format='ixt:dateDayMonthnameYearNlType' name='bd-i-ext2:AllowanceStartDate'>1 februari 2020</ix:nonNumeric>.</p>
-    <br />
-    <p class="cs3" style="left: 7pt; letter-spacing:0.15pt">Het beschikkingsnummer is <ix:nonNumeric contextRef='CD_Declarant_CareAllowance' name='bd-i-ext2:DisposalNumber'>781005553T2005133</ix:nonNumeric>.</p>
-    <br /><br />
-    <p class="cs4" style="left: 7pt; letter-spacing:0.15pt">Uw kindgebonden budget voor <ix:nonNumeric contextRef='CD_Algemeen' name='bd-i-ext2:AllowanceYear'>2020</ix:nonNumeric> wordt &euro;<ix:nonNumeric contextRef='CD_Declarant_ChildRelatedBudget' name='bd-i-ext2:DisposalYearAmount' decimals="INF" unitRef="EUR" >911</ix:nonNumeric>.</p>
-    <br />
-    <p class="cs3" style="left: 7pt; letter-spacing:0.15pt">Wij hebben uw kindgebonden budget berekend voor de periode vanaf <ix:nonNumeric contextRef='CD_Declarant_ChildRelatedBudget' format='ixt:dateDayMonthnameYearNlType' name='bd-i-ext2:AllowanceStartDate'>1 februari 2020</ix:nonNumeric>.</p>
-    <br />
-    <p class="cs3" style="left: 7pt; letter-spacing:0.15pt">Het beschikkingsnummer is <ix:nonNumeric contextRef='CD_Declarant_ChildRelatedBudget' name='bd-i-ext2:DisposalNumber'>781005553T2005134</ix:nonNumeric>.</p>
-    <br /><br />
-    <p class="cs4" style="left: 7pt; letter-spacing:0.15pt">Uw huurtoeslag voor <ix:nonNumeric contextRef='CD_Algemeen' name='bd-i-ext2:AllowanceYear'>2020</ix:nonNumeric> wordt &euro;<ix:nonNumeric contextRef='CD_Declarant_RentAllowance' name='bd-i-ext2:DisposalYearAmount' decimals="INF" unitRef="EUR" >827</ix:nonNumeric>.</p>
-    <br />
-    <p class="cs3" style="left: 7pt; letter-spacing:0.15pt">Wij hebben uw huurtoeslag berekend voor de periode vanaf <ix:nonNumeric contextRef='CD_Declarant_RentAllowance' format='ixt:dateDayMonthnameYearNlType' name='bd-i-ext2:AllowanceStartDate'>1 februari 2020</ix:nonNumeric>.</p>
-    <br />
-    <p class="cs3" style="left: 7pt; letter-spacing:0.15pt">Het beschikkingsnummer is <ix:nonNumeric contextRef='CD_Declarant_RentAllowance' name='bd-i-ext2:DisposalNumber'>781005553T2005132</ix:nonNumeric>.</p>
-    <br /><br />
-    <p class="cs4" style="left: 7pt; letter-spacing:0.15pt">Uw kinderopvangtoeslag voor <ix:nonNumeric contextRef='CD_Algemeen' name='bd-i-ext2:AllowanceYear'>2020</ix:nonNumeric> wordt &euro;<ix:nonNumeric contextRef='CD_Declarant_DayCareAllowance' format='ixt:num-unit-decimal'name='bd-i-ext2:DisposalYearAmount' decimals="INF" unitRef="EUR" >3433</ix:nonNumeric>.</p>
-    <br />
-    <p class="cs3" style="left: 7pt; letter-spacing:0.15pt">Wij hebben uw kinderopvangtoeslag berekend voor de periode vanaf <ix:nonNumeric contextRef='CD_Declarant_DayCareAllowance' format='ixt:dateDayMonthnameYearNlType' name='bd-i-ext2:AllowanceStartDate'>10 januari 2020</ix:nonNumeric>.</p>
-    <br />
-    <p class="cs3" style="left: 7pt; letter-spacing:0.15pt">Het beschikkingsnummer is <ix:nonNumeric contextRef='CD_Declarant_DayCareAllowance' name='bd-i-ext2:DisposalNumber'>781005553T2005131</ix:nonNumeric>.</p>
-    <br /><br />
+  <div class="berekening" style="top: 280pt">
+    <div class="paragraph-header">Uw zorgtoeslag voor <ix:nonNumeric contextRef='CD_Algemeen' name='bd-i-ext2:AllowanceYear'>2020</ix:nonNumeric> wordt &euro;<ix:nonNumeric contextRef='CD_Declarant_CareAllowance' name='bd-i-ext2:DisposalYearAmount' decimals="INF" unitRef="EUR" >550</ix:nonNumeric>.</div>
+    <div class="text-normal">Wij hebben uw zorgtoeslag berekend voor de periode vanaf <ix:nonNumeric contextRef='CD_Declarant_CareAllowance' format='ixt:dateDayMonthnameYearNlType' name='bd-i-ext2:AllowanceStartDate'>1 februari 2020</ix:nonNumeric>.</div>
+    <div class="text-normal">Het beschikkingsnummer is <ix:nonNumeric contextRef='CD_Declarant_CareAllowance' name='bd-i-ext2:DisposalNumber'>781005553T2005133</ix:nonNumeric>.</div>
+    <div class="paragraph-header">Uw kindgebonden budget voor <ix:nonNumeric contextRef='CD_Algemeen' name='bd-i-ext2:AllowanceYear'>2020</ix:nonNumeric> wordt &euro;<ix:nonNumeric contextRef='CD_Declarant_ChildRelatedBudget' name='bd-i-ext2:DisposalYearAmount' decimals="INF" unitRef="EUR" >911</ix:nonNumeric>.</div>
+    <div class="text-normal">Wij hebben uw kindgebonden budget berekend voor de periode vanaf <ix:nonNumeric contextRef='CD_Declarant_ChildRelatedBudget' format='ixt:dateDayMonthnameYearNlType' name='bd-i-ext2:AllowanceStartDate'>1 februari 2020</ix:nonNumeric>.</div>
+    <div class="text-normal">Het beschikkingsnummer is <ix:nonNumeric contextRef='CD_Declarant_ChildRelatedBudget' name='bd-i-ext2:DisposalNumber'>781005553T2005134</ix:nonNumeric>.</div>
+    <div class="paragraph-header">Uw huurtoeslag voor <ix:nonNumeric contextRef='CD_Algemeen' name='bd-i-ext2:AllowanceYear'>2020</ix:nonNumeric> wordt &euro;<ix:nonNumeric contextRef='CD_Declarant_RentAllowance' name='bd-i-ext2:DisposalYearAmount' decimals="INF" unitRef="EUR" >827</ix:nonNumeric>.</div>
+    <div class="text-normal">Wij hebben uw huurtoeslag berekend voor de periode vanaf <ix:nonNumeric contextRef='CD_Declarant_RentAllowance' format='ixt:dateDayMonthnameYearNlType' name='bd-i-ext2:AllowanceStartDate'>1 februari 2020</ix:nonNumeric>.</div>
+    <div class="text-normal">Het beschikkingsnummer is <ix:nonNumeric contextRef='CD_Declarant_RentAllowance' name='bd-i-ext2:DisposalNumber'>781005553T2005132</ix:nonNumeric>.</div>
+    <div class="paragraph-header">Uw kinderopvangtoeslag voor <ix:nonNumeric contextRef='CD_Algemeen' name='bd-i-ext2:AllowanceYear'>2020</ix:nonNumeric> wordt &euro;<ix:nonNumeric contextRef='CD_Declarant_DayCareAllowance' format='ixt:num-unit-decimal' name='bd-i-ext2:DisposalYearAmount' decimals="INF" unitRef="EUR" >3433</ix:nonNumeric>.</div>
+    <div class="text-normal">Wij hebben uw kinderopvangtoeslag berekend voor de periode vanaf <ix:nonNumeric contextRef='CD_Declarant_DayCareAllowance' format='ixt:dateDayMonthnameYearNlType' name='bd-i-ext2:AllowanceStartDate'>10 januari 2020</ix:nonNumeric>.</div>
+    <div class="text-normal">Het beschikkingsnummer is <ix:nonNumeric contextRef='CD_Declarant_DayCareAllowance' name='bd-i-ext2:DisposalNumber'>781005553T2005131</ix:nonNumeric>.</div>
   </div>
-  <div class="bericht" style="top:540pt; height: 150pt; ">
-    <p class="cs4" style="letter-spacing:0.15pt">Specificatie gegevens</p>
-    <br />
-    <p class="cs3" style="white-space: pre-line; line-height: 1.7em">In <span class="cs5">Mijn toeslagen</span> op toeslagen.nl ziet u de gegevens waarmee wij uw toeslagen hebben berekend. U vindt de gegevens onder het tabblad &apos;Mijn beschikkingen&apos;.</p>
-    <br /><br /><br />
-    <p class="cs4" style="letter-spacing:0.15pt">Belangrijke informatie</p>
-    <br />
-    <p class="cs3" style="white-space: pre-line; line-height: 1.7em">U hebt (een deel van) dit jaar geen recht op toeslag, omdat uw toeslagpartner niet rechtmatig in Nederland verblijft.</p>
+  <div class="bericht" style="top:480pt; height: 150pt; ">
+    <div class="paragraph-header">Specificatie gegevens</div>
+    <div class="text-normal">In <span class="emphasis">Mijn toeslagen</span> op toeslagen.nl ziet u de gegevens waarmee wij uw toeslagen hebben berekend. U vindt de gegevens onder het tabblad &apos;Mijn beschikkingen&apos;.</div>
+    <div class="paragraph-header">Belangrijke informatie</div>
+    <div class="text-normal">U hebt (een deel van) dit jaar geen recht op toeslag, omdat uw toeslagpartner niet rechtmatig in Nederland verblijft.</div>
   </div>
 </div>
 <!-- Pagina 2 -->
 <div class="page">
   <div id="container-heading3" style="top: 25pt">
-    <div style="position: absolute; left: 120pt; height: 100%; width: 90pt; border-left: black solid 1pt">
-      <div class="cs3" style="left: 4pt; top:1pt; letter-spacing:0.25pt">Datum</div>
-      <div class="cs2" style="left: 4pt; top:13pt; letter-spacing:0.25pt"><ix:nonNumeric contextRef='CD_Algemeen' format='ixt:dateDayMonthnameYearNlType' name='bd-i:NoticeOfAssessmentDate'>6 maart 2020</ix:nonNumeric></div>
+    <div class="page-info" style="left: 120pt;">
+      <div class="text-normal" style="top:1pt;">Datum</div>
+      <div class="text-small" style="top:13pt"><ix:nonNumeric contextRef='CD_Algemeen' format='ixt:dateDayMonthnameYearNlType' name='bd-i:NoticeOfAssessmentDate'>6 maart 2020</ix:nonNumeric></div>
     </div>
-    <div style="position: absolute; left: 219pt; height: 100%; width: 70pt; border-left: black solid 1pt">
-      <div class="cs3" style="left: 4pt; top:1pt; letter-spacing:0.25pt">Pagina</div>
-      <div class="cs2" style="left: 4pt; top:13pt; letter-spacing:0.25pt">2 van 2</div>
+    <div class="page-info" style="left: 219pt;">
+      <div class="text-normal" style="top:1pt;">Pagina</div>
+      <div class="text-small" style="top:13pt">2 van 2</div>
     </div>
   </div>
-  <div class="bericht" style="top:50pt; height: 500pt;">
-    <p class="cs4">Toelichting</p>
-    <br /><br />
-    <p class="cs4" style="letter-spacing:0.2pt">Uitbetaling van uw toeslag</p>
-    <p style="margin: 0pt"><br /></p>
-    <p class="cs3" style="white-space: pre-line;">Wij betalen uw toeslag meestal in maandelijkse termijnen uit, rond de 20e van de maand. Kijk voor de datums waarop wij de toeslag uitbetalen op toeslagen.nl. Uw toeslag kunnen we verrekeken met de toeslag die u eerder te veel of te weinig hebt gekregen.</p>
-    <p style="margin: 20pt"><br /></p>
-    <p class="cs4" style="letter-spacing:0.2pt">Kijk of alles klopt</p>
-    <p style="margin: 0pt"><br /></p>
-    <p class="cs3" style="white-space: pre-line;">Controleer de gegevens waarmee wij uw voorschot hebben berekend goed. Klopt er iets niet? Het makkelijkst is om dan een wijziging aan ons door te geven met <span class="cs5">Mijn toeslagen</span>. U ziet dan meteen het nieuwe bedrag van uw toeslag. Soms is het nodig dat u binnen 6 weken bezwaar maakt. Kijk voor meer informatie op toeslagen.nl/oneens.</p>
-    <p style="margin: 20pt"><br /></p>
-    <p class="cs4" style="letter-spacing:0.2pt">Voorlopige berekening</p>
-    <p style="margin: 0pt"><br /></p>
-    <p class="cs3" style="white-space: pre-line;">Deze voorschotbeschikking is een voorlopige berekening. De berekening is gebaseerd op de gegevens die op dit moment bij ons bekend zijn. Verandert er iets in uw situatie waardoor uw toeslag lager wordt of stopt? U bent verplicht om dit binnen 4 weken aan ons door te geven. U ontvangt dan een nieuwe voorlopige berekening. Na afloop van het jaar zijn de gegevens, zoals uw jaarinkomen, definitief. U krijgt dan een definitieve berekening.</p>
-    <p style="margin: 20pt"><br /></p>
-    <p class="cs4" style="letter-spacing:0.2pt">Meer informatie</p>
-    <p style="margin: 0pt"><br /></p>
-    <p class="cs3" style="white-space: pre-line;">Hebt u nog vragen over uw toeslagen? Kijk dan op toeslagen.nl. U kunt daar ook inloggen op <span class="cs5">Mijn toeslagen</span>.</p>
-    <p style="margin: 20pt"><br /></p>
-    <p class="cs4" style="letter-spacing:0.2pt">Helpdesk Digitale Post</p>
-    <p style="margin: 0pt"><br /></p>
-    <p class="cs3" style="white-space: pre-line;">Hebt u geen toegang tot Mijn toeslagen of onze website? Dan kunt u meer informatie krijgen via de Helpdesk Digitale Post: 0800 - 235 83 52 (gratis).</p>
+  <div class="chapter-header" style="top:85pt; left: 70pt">Toelichting</div>
+  <div class="bericht" style="top:125pt; height: 500pt;">
+    <div class="paragraph-header">Uitbetaling van uw toeslag</div>
+    <div class="text-normal">Wij betalen uw toeslag meestal in maandelijkse termijnen uit, rond de 20e van de maand. Kijk voor de datums waarop wij de toeslag uitbetalen op toeslagen.nl. Uw toeslag kunnen we verrekeken met de toeslag die u eerder te veel of te weinig hebt gekregen.</div>
+    <div class="paragraph-header">Kijk of alles klopt</div>
+    <div class="text-normal">Controleer de gegevens waarmee wij uw voorschot hebben berekend goed. Klopt er iets niet? Het makkelijkst is om dan een wijziging aan ons door te geven met <span class="emphasis">Mijn toeslagen</span>. U ziet dan meteen het nieuwe bedrag van uw toeslag. Soms is het nodig dat u binnen 6 weken bezwaar maakt. Kijk voor meer informatie op toeslagen.nl/oneens.</div>
+    <div class="paragraph-header">Voorlopige berekening</div>
+    <div class="text-normal">Deze voorschotbeschikking is een voorlopige berekening. De berekening is gebaseerd op de gegevens die op dit moment bij ons bekend zijn. Verandert er iets in uw situatie waardoor uw toeslag lager wordt of stopt? U bent verplicht om dit binnen 4 weken aan ons door te geven. U ontvangt dan een nieuwe voorlopige berekening. Na afloop van het jaar zijn de gegevens, zoals uw jaarinkomen, definitief. U krijgt dan een definitieve berekening.</div>
+    <div class="paragraph-header">Meer informatie</div>
+    <div class="text-normal">Hebt u nog vragen over uw toeslagen? Kijk dan op toeslagen.nl. U kunt daar ook inloggen op <span class="emphasis">Mijn toeslagen</span>.</div>
+    <div class="paragraph-header">Helpdesk Digitale Post</div>
+    <div class="text-normal">Hebt u geen toegang tot Mijn toeslagen of onze website? Dan kunt u meer informatie krijgen via de Helpdesk Digitale Post: 0800 - 235 83 52 (gratis).</div>
   </div>
 </div>
 <div class='hidden'>
