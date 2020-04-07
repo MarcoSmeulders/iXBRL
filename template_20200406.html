@@ -1,0 +1,613 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:link="http://www.xbrl.org/2003/linkbase"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:ix='http://www.xbrl.org/2013/inlineXBRL'
+    xmlns:ixt='http://www.xbrl.org/inlineXBRL/transformation/2020-02-12'
+    xmlns:xbrldi="http://xbrl.org/2006/xbrldi"
+    xmlns:xbrli="http://www.xbrl.org/2003/instance"
+    xmlns:iso4217="http://www.xbrl.org/2003/iso4217"
+    xmlns:bd-dim-dim="http://www.nltaxonomie.nl/nt13/bd/20181212/validation/bd-axes"
+    xmlns:bd-dim-dim-ext2="http://www.nltaxonomie.nl/nt13/bd/20190918/validation/bd-axes-ext2"
+    xmlns:bd-dim-mem="http://www.nltaxonomie.nl/nt13/bd/20181212/dictionary/bd-domain-members"
+    xmlns:bd-dim-mem-ext2="http://www.nltaxonomie.nl/nt13/bd/20190918/dictionary/bd-domain-members-ext2"
+    xmlns:bd-i="http://www.nltaxonomie.nl/nt13/bd/20181212/dictionary/bd-data"
+    xmlns:bd-i-ext2="http://www.nltaxonomie.nl/nt13/bd/20190918/dictionary/bd-data-ext2"
+    xmlns:bd-t-ext2="http://www.nltaxonomie.nl/nt13/bd/20190918/dictionary/bd-tuples-ext2"
+    xml:lang="nl"
+    lang="nl"
+>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <title>Voorbeeld specificatie DT zorg</title>
+  <style type="text/css">
+    * {box-sizing: border-box}
+    .hidden{ display: none}
+    @media screen { .page {border:solid 1pt black; margin:10pt auto 10pt auto;} }
+    .page {position:relative; width:595.3pt; height:841.9pt; page-break-after: always;}
+    .container-heading1 {position:absolute; left:57.55pt; top:31.7pt; width: 300pt; height: 55pt;}
+    #container-heading2 {position:absolute; left:380.55pt; top:21.7pt; width: 180pt; height: 170pt;}
+    #container-heading3 {position:absolute; left:290pt; top:71pt; width: 270pt; height: 24pt; }
+    #container-heading4 {position:absolute; left:330.55pt; top:21.7pt; width: 40pt; height: 24pt; }
+    #naw {position:absolute; left:70pt; top:90pt; width: 300pt; height: 60pt; line-height: 1em;}
+    .berekening {position:absolute; left:64pt;  width: 480pt; height: 300pt; line-height: 1.3em;}
+    .bericht {position:absolute; left:70pt; width: 480pt; line-height: 1.3em}
+    .cs1 { font:8pt 'Arial'; color:#000000; position: absolute; white-space: pre;}
+    .cs2 { font:9pt 'Arial'; color:#000000; position: absolute; white-space: pre;}
+    .cs3 { font:9.5pt 'Arial'; color:#000000; position: absolute; white-space: pre;}
+    .cs4 { font:9.5pt 'Arial'; color:#000000; position: absolute; white-space: pre; font-weight:bold;}
+    .cs5 { font:9.5pt 'Arial'; color:#000000; font-style:italic;}
+    .cs6 { font:12pt 'Arial'; color:#000000; font-weight:bold; position: absolute; white-space: pre;}
+    .cs7 { font:12pt 'Arial'; color:#000000; position: absolute; white-space: pre;}
+    .cs8 { font:16pt 'Arial'; color:#FF0000; font-weight:bold; position: absolute; white-space: pre;}
+    .cs9 { font:11pt 'Arial'; color:#FF0000; font-style:italic; position: absolute; white-space: pre;}
+  </style>
+</head>
+<body>
+<!-- Pagina 1 -->
+<div class="page" >
+  <div class="container-heading1" >
+    <div class="cs8" style="letter-spacing:0.15pt">Toeslagen</div>
+    <div class="cs9" style="top: 20.35pt; letter-spacing:0.15pt">Belastingdienst</div>
+    <div class="cs6" style="top:43.1pt;">&gt;</div>
+    <div class="cs1" style="top:47.5pt; left: 13.8pt; letter-spacing:0.25pt; position: absolute;">Postbus 4510, 6401 JA Heerlen</div>
+  </div>
+  <div id="container-heading2">
+    <div style="position:absolute; width: 100pt;height: 29pt; border-left:black solid 1pt">
+      <div class="cs6" style="left: 7pt; top: 1pt; letter-spacing:0.2pt">Voorschotbeschikking</div>
+      <div class="cs7" style="left: 7pt; top: 15pt; letter-spacing:0.2pt">Toeslagen</div>
+    </div>
+    <div style="position:absolute; top: 77pt; width: 100pt;height: 21pt; border-left:black solid 1pt">
+      <div class="cs1" style="left: 7pt; letter-spacing:0.25pt">Internet</div>
+      <div class="cs2" style="left: 7pt; top:10pt; letter-spacing:0.2pt">toeslagen.nl</div>
+    </div>
+    <div style="position:absolute; top: 111pt; width: 100pt;height: 21pt; border-left:black solid 1pt">
+      <div class="cs1" style="left: 7pt; letter-spacing:0.25pt">Kenmerk</div>
+      <div class="cs2" style="left: 7pt; top: 10pt; letter-spacing:0.25pt"><ix:nonNumeric contextRef='CD_Algemeen' name='bd-i-ext2:MessageAttribute'>7810.05.553.T.SC.20.2</ix:nonNumeric></div>
+    </div>
+    <div style="position:absolute; top: 147pt; width: 100pt;height: 21pt; border-left:black solid 1pt">
+      <div class="cs1" style="left: 7pt; letter-spacing:0.15pt">Datum</div>
+      <div class="cs2" style="left: 7pt; top: 10pt; letter-spacing:0.25pt"><ix:nonNumeric contextRef='CD_Algemeen' format='ixt:dateDayMonthnameYearNlType' name='bd-i:NoticeOfAssessmentDate'>6 maart 2020</ix:nonNumeric></div>
+    </div>
+  </div>
+  <div id="container-heading4">
+    <div style="position:absolute; width: 100pt;height: 29pt;">
+      <div class="cs6" style="left: 7pt; top: 1pt; letter-spacing:0.2pt"><ix:nonNumeric contextRef='CD_Algemeen' name='bd-i-ext2:AllowanceYear' decimals="INF" >2020</ix:nonNumeric></div>
+    </div>
+  </div>
+  <div id="naw">
+    <p class="cs3"><ix:nonNumeric contextRef='CD_Declarant' name='bd-i:Surname'>A F-OUT-HR-KI-KO-ZO-07-A001-01</ix:nonNumeric></p>
+    <br />
+    <p class="cs3" style="letter-spacing:0.25pt"><ix:nonNumeric contextRef='CD_Declarant_RentAllowance001' name='bd-i:StreetNameNL' tupleRef='T8' order='1'>Kalverstraat</ix:nonNumeric> <ix:nonNumeric contextRef='CD_Declarant_RentAllowance001' name='bd-i:HouseNumberNL' tupleRef='T8' order='1'>211</ix:nonNumeric></p>
+    <br />
+    <p class="cs3" style="letter-spacing:0.2pt"><ix:nonNumeric contextRef='CD_Declarant_RentAllowance001' name='bd-i:PostalCodeNL' tupleRef='T8' order='1'>1012XC</ix:nonNumeric> <ix:nonNumeric contextRef='CD_Declarant_RentAllowance001' name='bd-i:PlaceOfResidenceNL' tupleRef='T8' order='1'>Amsterdam</ix:nonNumeric></p>
+  </div>
+  <div class="bericht" style="top:248pt; height: 20pt;">
+    <p class="cs4" style="letter-spacing:0.15pt">Wij hebben uw toeslag(en) voor <ix:nonNumeric contextRef='CD_Algemeen' name='bd-i-ext2:AllowanceYear'>2020</ix:nonNumeric> (opnieuw) berekend.</p>
+    <br /><br />
+  </div>
+  <div class="berekening" style="left: 63pt; top: 290pt; height: 240pt; width: 420pt; border-left: black solid 1pt" >
+    <p class="cs4" style="left: 7pt; letter-spacing:0.15pt">Uw zorgtoeslag voor <ix:nonNumeric contextRef='CD_Algemeen' name='bd-i-ext2:AllowanceYear'>2020</ix:nonNumeric> wordt &euro;<ix:nonNumeric contextRef='CD_Declarant_CareAllowance' name='bd-i-ext2:DisposalYearAmount' decimals="INF" unitRef="EUR" >550</ix:nonNumeric>.</p>
+    <br />
+    <p class="cs3" style="left: 7pt; letter-spacing:0.15pt">Wij hebben uw zorgtoeslag berekend voor de periode vanaf <ix:nonNumeric contextRef='CD_Declarant_CareAllowance' format='ixt:dateDayMonthnameYearNlType' name='bd-i-ext2:AllowanceStartDate'>1 februari 2020</ix:nonNumeric>.</p>
+    <br />
+    <p class="cs3" style="left: 7pt; letter-spacing:0.15pt">Het beschikkingsnummer is <ix:nonNumeric contextRef='CD_Declarant_CareAllowance' name='bd-i-ext2:DisposalNumber'>781005553T2005133</ix:nonNumeric>.</p>
+    <br /><br />
+    <p class="cs4" style="left: 7pt; letter-spacing:0.15pt">Uw kindgebonden budget voor <ix:nonNumeric contextRef='CD_Algemeen' name='bd-i-ext2:AllowanceYear'>2020</ix:nonNumeric> wordt &euro;<ix:nonNumeric contextRef='CD_Declarant_ChildRelatedBudget' name='bd-i-ext2:DisposalYearAmount' decimals="INF" unitRef="EUR" >911</ix:nonNumeric>.</p>
+    <br />
+    <p class="cs3" style="left: 7pt; letter-spacing:0.15pt">Wij hebben uw kindgebonden budget berekend voor de periode vanaf <ix:nonNumeric contextRef='CD_Declarant_ChildRelatedBudget' format='ixt:dateDayMonthnameYearNlType' name='bd-i-ext2:AllowanceStartDate'>1 februari 2020</ix:nonNumeric>.</p>
+    <br />
+    <p class="cs3" style="left: 7pt; letter-spacing:0.15pt">Het beschikkingsnummer is <ix:nonNumeric contextRef='CD_Declarant_ChildRelatedBudget' name='bd-i-ext2:DisposalNumber'>781005553T2005134</ix:nonNumeric>.</p>
+    <br /><br />
+    <p class="cs4" style="left: 7pt; letter-spacing:0.15pt">Uw huurtoeslag voor <ix:nonNumeric contextRef='CD_Algemeen' name='bd-i-ext2:AllowanceYear'>2020</ix:nonNumeric> wordt &euro;<ix:nonNumeric contextRef='CD_Declarant_RentAllowance' name='bd-i-ext2:DisposalYearAmount' decimals="INF" unitRef="EUR" >827</ix:nonNumeric>.</p>
+    <br />
+    <p class="cs3" style="left: 7pt; letter-spacing:0.15pt">Wij hebben uw huurtoeslag berekend voor de periode vanaf <ix:nonNumeric contextRef='CD_Declarant_RentAllowance' format='ixt:dateDayMonthnameYearNlType' name='bd-i-ext2:AllowanceStartDate'>1 februari 2020</ix:nonNumeric>.</p>
+    <br />
+    <p class="cs3" style="left: 7pt; letter-spacing:0.15pt">Het beschikkingsnummer is <ix:nonNumeric contextRef='CD_Declarant_RentAllowance' name='bd-i-ext2:DisposalNumber'>781005553T2005132</ix:nonNumeric>.</p>
+    <br /><br />
+    <p class="cs4" style="left: 7pt; letter-spacing:0.15pt">Uw kinderopvangtoeslag voor <ix:nonNumeric contextRef='CD_Algemeen' name='bd-i-ext2:AllowanceYear'>2020</ix:nonNumeric> wordt &euro;<ix:nonNumeric contextRef='CD_Declarant_DayCareAllowance' format='ixt:num-unit-decimal'name='bd-i-ext2:DisposalYearAmount' decimals="INF" unitRef="EUR" >3433</ix:nonNumeric>.</p>
+    <br />
+    <p class="cs3" style="left: 7pt; letter-spacing:0.15pt">Wij hebben uw kinderopvangtoeslag berekend voor de periode vanaf <ix:nonNumeric contextRef='CD_Declarant_DayCareAllowance' format='ixt:dateDayMonthnameYearNlType' name='bd-i-ext2:AllowanceStartDate'>10 januari 2020</ix:nonNumeric>.</p>
+    <br />
+    <p class="cs3" style="left: 7pt; letter-spacing:0.15pt">Het beschikkingsnummer is <ix:nonNumeric contextRef='CD_Declarant_DayCareAllowance' name='bd-i-ext2:DisposalNumber'>781005553T2005131</ix:nonNumeric>.</p>
+    <br /><br />
+  </div>
+  <div class="bericht" style="top:540pt; height: 150pt; ">
+    <p class="cs4" style="letter-spacing:0.15pt">Specificatie gegevens</p>
+    <br />
+    <p class="cs3" style="white-space: pre-line; line-height: 1.7em">In <span class="cs5">Mijn toeslagen</span> op toeslagen.nl ziet u de gegevens waarmee wij uw toeslagen hebben berekend. U vindt de gegevens onder het tabblad &apos;Mijn beschikkingen&apos;.</p>
+    <br /><br /><br />
+    <p class="cs4" style="letter-spacing:0.15pt">Belangrijke informatie</p>
+    <br />
+    <p class="cs3" style="white-space: pre-line; line-height: 1.7em">U hebt (een deel van) dit jaar geen recht op toeslag, omdat uw toeslagpartner niet rechtmatig in Nederland verblijft.</p>
+  </div>
+</div>
+<!-- Pagina 2 -->
+<div class="page">
+  <div id="container-heading3" style="top: 25pt">
+    <div style="position: absolute; left: 120pt; height: 100%; width: 90pt; border-left: black solid 1pt">
+      <div class="cs3" style="left: 4pt; top:1pt; letter-spacing:0.25pt">Datum</div>
+      <div class="cs2" style="left: 4pt; top:13pt; letter-spacing:0.25pt"><ix:nonNumeric contextRef='CD_Algemeen' format='ixt:dateDayMonthnameYearNlType' name='bd-i:NoticeOfAssessmentDate'>6 maart 2020</ix:nonNumeric></div>
+    </div>
+    <div style="position: absolute; left: 219pt; height: 100%; width: 70pt; border-left: black solid 1pt">
+      <div class="cs3" style="left: 4pt; top:1pt; letter-spacing:0.25pt">Pagina</div>
+      <div class="cs2" style="left: 4pt; top:13pt; letter-spacing:0.25pt">2 van 2</div>
+    </div>
+  </div>
+  <div class="bericht" style="top:50pt; height: 500pt;">
+    <p class="cs4">Toelichting</p>
+    <br /><br />
+    <p class="cs4" style="letter-spacing:0.2pt">Uitbetaling van uw toeslag</p>
+    <p style="margin: 0pt"><br /></p>
+    <p class="cs3" style="white-space: pre-line;">Wij betalen uw toeslag meestal in maandelijkse termijnen uit, rond de 20e van de maand. Kijk voor de datums waarop wij de toeslag uitbetalen op toeslagen.nl. Uw toeslag kunnen we verrekeken met de toeslag die u eerder te veel of te weinig hebt gekregen.</p>
+    <p style="margin: 20pt"><br /></p>
+    <p class="cs4" style="letter-spacing:0.2pt">Kijk of alles klopt</p>
+    <p style="margin: 0pt"><br /></p>
+    <p class="cs3" style="white-space: pre-line;">Controleer de gegevens waarmee wij uw voorschot hebben berekend goed. Klopt er iets niet? Het makkelijkst is om dan een wijziging aan ons door te geven met <span class="cs5">Mijn toeslagen</span>. U ziet dan meteen het nieuwe bedrag van uw toeslag. Soms is het nodig dat u binnen 6 weken bezwaar maakt. Kijk voor meer informatie op toeslagen.nl/oneens.</p>
+    <p style="margin: 20pt"><br /></p>
+    <p class="cs4" style="letter-spacing:0.2pt">Voorlopige berekening</p>
+    <p style="margin: 0pt"><br /></p>
+    <p class="cs3" style="white-space: pre-line;">Deze voorschotbeschikking is een voorlopige berekening. De berekening is gebaseerd op de gegevens die op dit moment bij ons bekend zijn. Verandert er iets in uw situatie waardoor uw toeslag lager wordt of stopt? U bent verplicht om dit binnen 4 weken aan ons door te geven. U ontvangt dan een nieuwe voorlopige berekening. Na afloop van het jaar zijn de gegevens, zoals uw jaarinkomen, definitief. U krijgt dan een definitieve berekening.</p>
+    <p style="margin: 20pt"><br /></p>
+    <p class="cs4" style="letter-spacing:0.2pt">Meer informatie</p>
+    <p style="margin: 0pt"><br /></p>
+    <p class="cs3" style="white-space: pre-line;">Hebt u nog vragen over uw toeslagen? Kijk dan op toeslagen.nl. U kunt daar ook inloggen op <span class="cs5">Mijn toeslagen</span>.</p>
+    <p style="margin: 20pt"><br /></p>
+    <p class="cs4" style="letter-spacing:0.2pt">Helpdesk Digitale Post</p>
+    <p style="margin: 0pt"><br /></p>
+    <p class="cs3" style="white-space: pre-line;">Hebt u geen toegang tot Mijn toeslagen of onze website? Dan kunt u meer informatie krijgen via de Helpdesk Digitale Post: 0800 - 235 83 52 (gratis).</p>
+  </div>
+</div>
+<div class='hidden'>
+  <ix:header>
+    <ix:references>
+      <link:schemaRef xlink:type="simple" xlink:href="http://www.nltaxonomie.nl/nt13/bd/20190918/entrypoints/bd-rpt-tsl-sbt-2020.xsd"/>
+    </ix:references>
+    <ix:hidden>
+      <ix:tuple name='bd-t-ext2:DayCareDataSpecification' tupleID='T1'/>
+      <ix:tuple name='bd-t-ext2:DayCareDataSpecification' tupleID='T3'/>
+      <ix:tuple name='bd-t-ext2:DayCareDataSpecification' tupleID='T5'/>
+      <ix:tuple name='bd-t:AddressPresentation' tupleID='T2'/>
+      <ix:tuple name='bd-t:AddressPresentation' tupleID='T4'/>
+      <ix:tuple name='bd-t:AddressPresentation' tupleID='T6'/>
+      <ix:tuple name='bd-t:AddressPresentation' tupleID='T8'/>
+      <ix:tuple name='bd-t-ext2:RentalObjectAddressPresentation' tupleID='T7'/>
+    </ix:hidden>
+    <ix:resources>
+      <xbrli:context id="CD_Algemeen">
+        <xbrli:entity>
+          <xbrli:identifier scheme="www.belastingdienst.nl/identificatie">781005553</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+          <xbrli:startDate>2020-01-10</xbrli:startDate>
+          <xbrli:endDate>2020-12-31</xbrli:endDate>
+        </xbrli:period>
+      </xbrli:context>
+      <xbrli:context id="CD_Child_ChildRelatedBudget001">
+        <xbrli:entity>
+          <xbrli:identifier scheme="www.belastingdienst.nl/identificatie">000003577</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+          <xbrli:startDate>2020-02-01</xbrli:startDate>
+          <xbrli:endDate>2020-12-31</xbrli:endDate>
+        </xbrli:period>
+        <xbrli:scenario>
+          <xbrldi:explicitMember dimension="bd-dim-dim:PartyDimension">bd-dim-mem-ext2:Child</xbrldi:explicitMember>
+          <xbrldi:explicitMember dimension="bd-dim-dim-ext2:SchemeDimension">bd-dim-mem-ext2:ChildRelatedBudget</xbrldi:explicitMember>
+        </xbrli:scenario>
+      </xbrli:context>
+      <xbrli:context id="CD_Child_DayCareAllowance001">
+        <xbrli:entity>
+          <xbrli:identifier scheme="www.belastingdienst.nl/identificatie">000007577</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+          <xbrli:startDate>2020-01-10</xbrli:startDate>
+          <xbrli:endDate>2020-01-10</xbrli:endDate>
+        </xbrli:period>
+        <xbrli:scenario>
+          <xbrldi:explicitMember dimension="bd-dim-dim:PartyDimension">bd-dim-mem-ext2:Child</xbrldi:explicitMember>
+          <xbrldi:explicitMember dimension="bd-dim-dim-ext2:SchemeDimension">bd-dim-mem-ext2:DayCareAllowance</xbrldi:explicitMember>
+        </xbrli:scenario>
+      </xbrli:context>
+      <xbrli:context id="CD_Child_DayCareAllowance002">
+        <xbrli:entity>
+          <xbrli:identifier scheme="www.belastingdienst.nl/identificatie">000009577</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+          <xbrli:startDate>2020-01-11</xbrli:startDate>
+          <xbrli:endDate>2020-01-11</xbrli:endDate>
+        </xbrli:period>
+        <xbrli:scenario>
+          <xbrldi:explicitMember dimension="bd-dim-dim:PartyDimension">bd-dim-mem-ext2:Child</xbrldi:explicitMember>
+          <xbrldi:explicitMember dimension="bd-dim-dim-ext2:SchemeDimension">bd-dim-mem-ext2:DayCareAllowance</xbrldi:explicitMember>
+        </xbrli:scenario>
+      </xbrli:context>
+      <xbrli:context id="CD_Child_DayCareAllowance003">
+        <xbrli:entity>
+          <xbrli:identifier scheme="www.belastingdienst.nl/identificatie">000011577</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+          <xbrli:startDate>2020-01-12</xbrli:startDate>
+          <xbrli:endDate>2020-12-31</xbrli:endDate>
+        </xbrli:period>
+        <xbrli:scenario>
+          <xbrldi:explicitMember dimension="bd-dim-dim:PartyDimension">bd-dim-mem-ext2:Child</xbrldi:explicitMember>
+          <xbrldi:explicitMember dimension="bd-dim-dim-ext2:SchemeDimension">bd-dim-mem-ext2:DayCareAllowance</xbrldi:explicitMember>
+        </xbrli:scenario>
+      </xbrli:context>
+      <xbrli:context id="CD_Declarant">
+        <xbrli:entity>
+          <xbrli:identifier scheme="www.belastingdienst.nl/identificatie">781005553</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+          <xbrli:startDate>2020-01-10</xbrli:startDate>
+          <xbrli:endDate>2020-12-31</xbrli:endDate>
+        </xbrli:period>
+        <xbrli:scenario>
+          <xbrldi:explicitMember dimension="bd-dim-dim:PartyDimension">bd-dim-mem:Declarant</xbrldi:explicitMember>
+        </xbrli:scenario>
+      </xbrli:context>
+      <xbrli:context id="CD_Declarant_CareAllowance">
+        <xbrli:entity>
+          <xbrli:identifier scheme="www.belastingdienst.nl/identificatie">781005553</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+          <xbrli:startDate>2020-01-10</xbrli:startDate>
+          <xbrli:endDate>2020-12-31</xbrli:endDate>
+        </xbrli:period>
+        <xbrli:scenario>
+          <xbrldi:explicitMember dimension="bd-dim-dim:PartyDimension">bd-dim-mem:Declarant</xbrldi:explicitMember>
+          <xbrldi:explicitMember dimension="bd-dim-dim-ext2:SchemeDimension">bd-dim-mem-ext2:CareAllowance</xbrldi:explicitMember>
+        </xbrli:scenario>
+      </xbrli:context>
+      <xbrli:context id="CD_Declarant_CareAllowance001">
+        <xbrli:entity>
+          <xbrli:identifier scheme="www.belastingdienst.nl/identificatie">781005553</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+          <xbrli:startDate>2020-02-01</xbrli:startDate>
+          <xbrli:endDate>2020-12-31</xbrli:endDate>
+        </xbrli:period>
+        <xbrli:scenario>
+          <xbrldi:explicitMember dimension="bd-dim-dim:PartyDimension">bd-dim-mem:Declarant</xbrldi:explicitMember>
+          <xbrldi:explicitMember dimension="bd-dim-dim-ext2:SchemeDimension">bd-dim-mem-ext2:CareAllowance</xbrldi:explicitMember>
+        </xbrli:scenario>
+      </xbrli:context>
+      <xbrli:context id="CD_Declarant_ChildRelatedBudget">
+        <xbrli:entity>
+          <xbrli:identifier scheme="www.belastingdienst.nl/identificatie">781005553</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+          <xbrli:startDate>2020-01-10</xbrli:startDate>
+          <xbrli:endDate>2020-12-31</xbrli:endDate>
+        </xbrli:period>
+        <xbrli:scenario>
+          <xbrldi:explicitMember dimension="bd-dim-dim:PartyDimension">bd-dim-mem:Declarant</xbrldi:explicitMember>
+          <xbrldi:explicitMember dimension="bd-dim-dim-ext2:SchemeDimension">bd-dim-mem-ext2:ChildRelatedBudget</xbrldi:explicitMember>
+        </xbrli:scenario>
+      </xbrli:context>
+      <xbrli:context id="CD_Declarant_ChildRelatedBudget001">
+        <xbrli:entity>
+          <xbrli:identifier scheme="www.belastingdienst.nl/identificatie">781005553</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+          <xbrli:startDate>2020-02-01</xbrli:startDate>
+          <xbrli:endDate>2020-12-31</xbrli:endDate>
+        </xbrli:period>
+        <xbrli:scenario>
+          <xbrldi:explicitMember dimension="bd-dim-dim:PartyDimension">bd-dim-mem:Declarant</xbrldi:explicitMember>
+          <xbrldi:explicitMember dimension="bd-dim-dim-ext2:SchemeDimension">bd-dim-mem-ext2:ChildRelatedBudget</xbrldi:explicitMember>
+        </xbrli:scenario>
+      </xbrli:context>
+      <xbrli:context id="CD_Declarant_DayCareAllowance">
+        <xbrli:entity>
+          <xbrli:identifier scheme="www.belastingdienst.nl/identificatie">781005553</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+          <xbrli:startDate>2020-01-10</xbrli:startDate>
+          <xbrli:endDate>2020-12-31</xbrli:endDate>
+        </xbrli:period>
+        <xbrli:scenario>
+          <xbrldi:explicitMember dimension="bd-dim-dim:PartyDimension">bd-dim-mem:Declarant</xbrldi:explicitMember>
+          <xbrldi:explicitMember dimension="bd-dim-dim-ext2:SchemeDimension">bd-dim-mem-ext2:DayCareAllowance</xbrldi:explicitMember>
+        </xbrli:scenario>
+      </xbrli:context>
+      <xbrli:context id="CD_Declarant_DayCareAllowance001">
+        <xbrli:entity>
+          <xbrli:identifier scheme="www.belastingdienst.nl/identificatie">781005553</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+          <xbrli:startDate>2020-01-10</xbrli:startDate>
+          <xbrli:endDate>2020-01-10</xbrli:endDate>
+        </xbrli:period>
+        <xbrli:scenario>
+          <xbrldi:explicitMember dimension="bd-dim-dim:PartyDimension">bd-dim-mem:Declarant</xbrldi:explicitMember>
+          <xbrldi:explicitMember dimension="bd-dim-dim-ext2:SchemeDimension">bd-dim-mem-ext2:DayCareAllowance</xbrldi:explicitMember>
+        </xbrli:scenario>
+      </xbrli:context>
+      <xbrli:context id="CD_Declarant_DayCareAllowance002">
+        <xbrli:entity>
+          <xbrli:identifier scheme="www.belastingdienst.nl/identificatie">781005553</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+          <xbrli:startDate>2020-01-11</xbrli:startDate>
+          <xbrli:endDate>2020-01-11</xbrli:endDate>
+        </xbrli:period>
+        <xbrli:scenario>
+          <xbrldi:explicitMember dimension="bd-dim-dim:PartyDimension">bd-dim-mem:Declarant</xbrldi:explicitMember>
+          <xbrldi:explicitMember dimension="bd-dim-dim-ext2:SchemeDimension">bd-dim-mem-ext2:DayCareAllowance</xbrldi:explicitMember>
+        </xbrli:scenario>
+      </xbrli:context>
+      <xbrli:context id="CD_Declarant_DayCareAllowance003">
+        <xbrli:entity>
+          <xbrli:identifier scheme="www.belastingdienst.nl/identificatie">781005553</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+          <xbrli:startDate>2020-01-12</xbrli:startDate>
+          <xbrli:endDate>2020-12-31</xbrli:endDate>
+        </xbrli:period>
+        <xbrli:scenario>
+          <xbrldi:explicitMember dimension="bd-dim-dim:PartyDimension">bd-dim-mem:Declarant</xbrldi:explicitMember>
+          <xbrldi:explicitMember dimension="bd-dim-dim-ext2:SchemeDimension">bd-dim-mem-ext2:DayCareAllowance</xbrldi:explicitMember>
+        </xbrli:scenario>
+      </xbrli:context>
+      <xbrli:context id="CD_Declarant_RentAllowance">
+        <xbrli:entity>
+          <xbrli:identifier scheme="www.belastingdienst.nl/identificatie">781005553</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+          <xbrli:startDate>2020-01-10</xbrli:startDate>
+          <xbrli:endDate>2020-12-31</xbrli:endDate>
+        </xbrli:period>
+        <xbrli:scenario>
+          <xbrldi:explicitMember dimension="bd-dim-dim:PartyDimension">bd-dim-mem:Declarant</xbrldi:explicitMember>
+          <xbrldi:explicitMember dimension="bd-dim-dim-ext2:SchemeDimension">bd-dim-mem-ext2:RentAllowance</xbrldi:explicitMember>
+        </xbrli:scenario>
+      </xbrli:context>
+      <xbrli:context id="CD_Declarant_RentAllowance001">
+        <xbrli:entity>
+          <xbrli:identifier scheme="www.belastingdienst.nl/identificatie">781005553</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+          <xbrli:startDate>2020-02-01</xbrli:startDate>
+          <xbrli:endDate>2020-12-31</xbrli:endDate>
+        </xbrli:period>
+        <xbrli:scenario>
+          <xbrldi:explicitMember dimension="bd-dim-dim:PartyDimension">bd-dim-mem:Declarant</xbrldi:explicitMember>
+          <xbrldi:explicitMember dimension="bd-dim-dim-ext2:SchemeDimension">bd-dim-mem-ext2:RentAllowance</xbrldi:explicitMember>
+        </xbrli:scenario>
+      </xbrli:context>
+      <xbrli:context id="CD_Inhabitant_RentAllowance001">
+        <xbrli:entity>
+          <xbrli:identifier scheme="www.belastingdienst.nl/identificatie">000005577</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+          <xbrli:startDate>2020-02-01</xbrli:startDate>
+          <xbrli:endDate>2020-12-31</xbrli:endDate>
+        </xbrli:period>
+        <xbrli:scenario>
+          <xbrldi:explicitMember dimension="bd-dim-dim:PartyDimension">bd-dim-mem-ext2:Inhabitant</xbrldi:explicitMember>
+          <xbrldi:explicitMember dimension="bd-dim-dim-ext2:SchemeDimension">bd-dim-mem-ext2:RentAllowance</xbrldi:explicitMember>
+        </xbrli:scenario>
+      </xbrli:context>
+      <xbrli:context id="CD_Partner_CareAllowance001">
+        <xbrli:entity>
+          <xbrli:identifier scheme="www.belastingdienst.nl/identificatie">000001565</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+          <xbrli:startDate>2020-02-01</xbrli:startDate>
+          <xbrli:endDate>2020-12-31</xbrli:endDate>
+        </xbrli:period>
+        <xbrli:scenario>
+          <xbrldi:explicitMember dimension="bd-dim-dim:PartyDimension">bd-dim-mem:Partner</xbrldi:explicitMember>
+          <xbrldi:explicitMember dimension="bd-dim-dim-ext2:SchemeDimension">bd-dim-mem-ext2:CareAllowance</xbrldi:explicitMember>
+        </xbrli:scenario>
+      </xbrli:context>
+      <xbrli:context id="CD_Partner_ChildRelatedBudget001">
+        <xbrli:entity>
+          <xbrli:identifier scheme="www.belastingdienst.nl/identificatie">000002565</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+          <xbrli:startDate>2020-02-01</xbrli:startDate>
+          <xbrli:endDate>2020-12-31</xbrli:endDate>
+        </xbrli:period>
+        <xbrli:scenario>
+          <xbrldi:explicitMember dimension="bd-dim-dim:PartyDimension">bd-dim-mem:Partner</xbrldi:explicitMember>
+          <xbrldi:explicitMember dimension="bd-dim-dim-ext2:SchemeDimension">bd-dim-mem-ext2:ChildRelatedBudget</xbrldi:explicitMember>
+        </xbrli:scenario>
+      </xbrli:context>
+      <xbrli:context id="CD_Partner_DayCareAllowance001">
+        <xbrli:entity>
+          <xbrli:identifier scheme="www.belastingdienst.nl/identificatie">000006565</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+          <xbrli:startDate>2020-01-10</xbrli:startDate>
+          <xbrli:endDate>2020-01-10</xbrli:endDate>
+        </xbrli:period>
+        <xbrli:scenario>
+          <xbrldi:explicitMember dimension="bd-dim-dim:PartyDimension">bd-dim-mem:Partner</xbrldi:explicitMember>
+          <xbrldi:explicitMember dimension="bd-dim-dim-ext2:SchemeDimension">bd-dim-mem-ext2:DayCareAllowance</xbrldi:explicitMember>
+        </xbrli:scenario>
+      </xbrli:context>
+      <xbrli:context id="CD_Partner_DayCareAllowance002">
+        <xbrli:entity>
+          <xbrli:identifier scheme="www.belastingdienst.nl/identificatie">000008565</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+          <xbrli:startDate>2020-01-11</xbrli:startDate>
+          <xbrli:endDate>2020-01-11</xbrli:endDate>
+        </xbrli:period>
+        <xbrli:scenario>
+          <xbrldi:explicitMember dimension="bd-dim-dim:PartyDimension">bd-dim-mem:Partner</xbrldi:explicitMember>
+          <xbrldi:explicitMember dimension="bd-dim-dim-ext2:SchemeDimension">bd-dim-mem-ext2:DayCareAllowance</xbrldi:explicitMember>
+        </xbrli:scenario>
+      </xbrli:context>
+      <xbrli:context id="CD_Partner_DayCareAllowance003">
+        <xbrli:entity>
+          <xbrli:identifier scheme="www.belastingdienst.nl/identificatie">000010565</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+          <xbrli:startDate>2020-01-12</xbrli:startDate>
+          <xbrli:endDate>2020-12-31</xbrli:endDate>
+        </xbrli:period>
+        <xbrli:scenario>
+          <xbrldi:explicitMember dimension="bd-dim-dim:PartyDimension">bd-dim-mem:Partner</xbrldi:explicitMember>
+          <xbrldi:explicitMember dimension="bd-dim-dim-ext2:SchemeDimension">bd-dim-mem-ext2:DayCareAllowance</xbrldi:explicitMember>
+        </xbrli:scenario>
+      </xbrli:context>
+      <xbrli:context id="CD_Partner_RentAllowance001">
+        <xbrli:entity>
+          <xbrli:identifier scheme="www.belastingdienst.nl/identificatie">000004565</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+          <xbrli:startDate>2020-02-01</xbrli:startDate>
+          <xbrli:endDate>2020-12-31</xbrli:endDate>
+        </xbrli:period>
+        <xbrli:scenario>
+          <xbrldi:explicitMember dimension="bd-dim-dim:PartyDimension">bd-dim-mem:Partner</xbrldi:explicitMember>
+          <xbrldi:explicitMember dimension="bd-dim-dim-ext2:SchemeDimension">bd-dim-mem-ext2:RentAllowance</xbrldi:explicitMember>
+        </xbrli:scenario>
+      </xbrli:context>
+      <xbrli:unit id="EUR">
+        <xbrli:measure>iso4217:EUR</xbrli:measure>
+      </xbrli:unit>
+      <xbrli:unit id="PURE">
+        <xbrli:measure>xbrli:pure</xbrli:measure>
+      </xbrli:unit>
+
+      <bd-i-ext2:AccountingRent contextRef="CD_Declarant_RentAllowance001" decimals="INF" unitRef="EUR">400.00</bd-i-ext2:AccountingRent>
+      <!--    <bd-i-ext2:AllowanceStartDate contextRef="CD_Declarant_CareAllowance">2020-02-01</bd-i-ext2:AllowanceStartDate>-->
+      <!--    <bd-i-ext2:AllowanceStartDate contextRef="CD_Declarant_ChildRelatedBudget">2020-02-01</bd-i-ext2:AllowanceStartDate>-->
+      <!--    <bd-i-ext2:AllowanceStartDate contextRef="CD_Declarant_DayCareAllowance">2020-01-10</bd-i-ext2:AllowanceStartDate>-->
+      <!--    <bd-i-ext2:AllowanceStartDate contextRef="CD_Declarant_RentAllowance">2020-02-01</bd-i-ext2:AllowanceStartDate>-->
+      <!--    <bd-i-ext2:AllowanceYear contextRef="CD_Algemeen">2020</bd-i-ext2:AllowanceYear>-->
+      <bd-i-ext2:Caretakercosts contextRef="CD_Declarant_RentAllowance001" decimals="INF" unitRef="EUR">0.00</bd-i-ext2:Caretakercosts>
+      <bd-i-ext2:Cleaningcosts contextRef="CD_Declarant_RentAllowance001" decimals="INF" unitRef="EUR">0.00</bd-i-ext2:Cleaningcosts>
+      <bd-i-ext2:DayCareGuestParentsHourlyRateAverage contextRef="CD_Child_DayCareAllowance001" decimals="INF" unitRef="EUR">5.00</bd-i-ext2:DayCareGuestParentsHourlyRateAverage>
+      <bd-i-ext2:DayCareGuestParentsHourlyRateAverage contextRef="CD_Child_DayCareAllowance002" decimals="INF" unitRef="EUR">5.00</bd-i-ext2:DayCareGuestParentsHourlyRateAverage>
+      <bd-i-ext2:DayCareGuestParentsHourlyRateAverage contextRef="CD_Child_DayCareAllowance003" decimals="INF" unitRef="EUR">5.00</bd-i-ext2:DayCareGuestParentsHourlyRateAverage>
+      <bd-i-ext2:DayCareGuestParentsHoursTotal contextRef="CD_Child_DayCareAllowance001" decimals="INF" unitRef="PURE">100</bd-i-ext2:DayCareGuestParentsHoursTotal>
+      <bd-i-ext2:DayCareGuestParentsHoursTotal contextRef="CD_Child_DayCareAllowance002" decimals="INF" unitRef="PURE">100</bd-i-ext2:DayCareGuestParentsHoursTotal>
+      <bd-i-ext2:DayCareGuestParentsHoursTotal contextRef="CD_Child_DayCareAllowance003" decimals="INF" unitRef="PURE">100</bd-i-ext2:DayCareGuestParentsHoursTotal>
+      <bd-i-ext2:DisposalDate contextRef="CD_Declarant_CareAllowance">2020-03-06</bd-i-ext2:DisposalDate>
+      <bd-i-ext2:DisposalDate contextRef="CD_Declarant_ChildRelatedBudget">2020-03-06</bd-i-ext2:DisposalDate>
+      <bd-i-ext2:DisposalDate contextRef="CD_Declarant_DayCareAllowance">2020-03-06</bd-i-ext2:DisposalDate>
+      <bd-i-ext2:DisposalDate contextRef="CD_Declarant_RentAllowance">2020-03-06</bd-i-ext2:DisposalDate>
+      <bd-i-ext2:DisposalLevelType contextRef="CD_Declarant_CareAllowance">2</bd-i-ext2:DisposalLevelType>
+      <bd-i-ext2:DisposalLevelType contextRef="CD_Declarant_ChildRelatedBudget">2</bd-i-ext2:DisposalLevelType>
+      <bd-i-ext2:DisposalLevelType contextRef="CD_Declarant_DayCareAllowance">2</bd-i-ext2:DisposalLevelType>
+      <bd-i-ext2:DisposalLevelType contextRef="CD_Declarant_RentAllowance">2</bd-i-ext2:DisposalLevelType>
+      <!--    <bd-i-ext2:DisposalNumber contextRef="CD_Declarant_CareAllowance">781005553T2005133</bd-i-ext2:DisposalNumber>-->
+      <!--    <bd-i-ext2:DisposalNumber contextRef="CD_Declarant_ChildRelatedBudget">781005553T2005134</bd-i-ext2:DisposalNumber>-->
+      <!--    <bd-i-ext2:DisposalNumber contextRef="CD_Declarant_DayCareAllowance">781005553T2005131</bd-i-ext2:DisposalNumber>-->
+      <!--    <bd-i-ext2:DisposalNumber contextRef="CD_Declarant_RentAllowance">781005553T2005132</bd-i-ext2:DisposalNumber>-->
+      <bd-i-ext2:DisposalTypeMainLevel contextRef="CD_Algemeen" decimals="INF" unitRef="PURE">1</bd-i-ext2:DisposalTypeMainLevel>
+      <bd-i-ext2:DisposalYear contextRef="CD_Algemeen">2020</bd-i-ext2:DisposalYear>
+      <!--    <bd-i-ext2:DisposalYearAmount contextRef="CD_Declarant_CareAllowance" decimals="INF" unitRef="EUR">550</bd-i-ext2:DisposalYearAmount>-->
+      <!--    <bd-i-ext2:DisposalYearAmount contextRef="CD_Declarant_ChildRelatedBudget" decimals="INF" unitRef="EUR">911</bd-i-ext2:DisposalYearAmount>-->
+      <!--    <bd-i-ext2:DisposalYearAmount contextRef="CD_Declarant_DayCareAllowance" decimals="INF" unitRef="EUR">3433</bd-i-ext2:DisposalYearAmount>-->
+      <!--    <bd-i-ext2:DisposalYearAmount contextRef="CD_Declarant_RentAllowance" decimals="INF" unitRef="EUR">827</bd-i-ext2:DisposalYearAmount>-->
+      <bd-i-ext2:Energycosts contextRef="CD_Declarant_RentAllowance001" decimals="INF" unitRef="EUR">0.00</bd-i-ext2:Energycosts>
+      <bd-i-ext2:ExemptionIncomeHomeResideChild contextRef="CD_Inhabitant_RentAllowance001" decimals="INF" unitRef="EUR">0</bd-i-ext2:ExemptionIncomeHomeResideChild>
+      <bd-i-ext2:HabitatRent contextRef="CD_Declarant_RentAllowance001" decimals="INF" unitRef="EUR">0.00</bd-i-ext2:HabitatRent>
+      <!--    <bd-i-ext2:MessageAttribute contextRef="CD_Algemeen">7810.05.553.T.SC.20.2</bd-i-ext2:MessageAttribute>-->
+      <bd-i-ext2:MessageDecision contextRef="CD_Algemeen">U hebt (een deel van) dit jaar geen recht op toeslag, omdat uw toeslagpartner niet rechtmatig in Nederland verblijft.</bd-i-ext2:MessageDecision>
+      <bd-i-ext2:MessageEndDate contextRef="CD_Algemeen">2020-03-02</bd-i-ext2:MessageEndDate>
+      <bd-i-ext2:MessageStartDate contextRef="CD_Algemeen">2020-03-02</bd-i-ext2:MessageStartDate>
+      <bd-i-ext2:MonthlyAmount contextRef="CD_Child_ChildRelatedBudget001" decimals="INF" unitRef="EUR">82</bd-i-ext2:MonthlyAmount>
+      <bd-i-ext2:MonthlyAmount contextRef="CD_Child_DayCareAllowance001" decimals="INF" unitRef="EUR">294</bd-i-ext2:MonthlyAmount>
+      <bd-i-ext2:MonthlyAmount contextRef="CD_Child_DayCareAllowance002" decimals="INF" unitRef="EUR">0</bd-i-ext2:MonthlyAmount>
+      <bd-i-ext2:MonthlyAmount contextRef="CD_Child_DayCareAllowance003" decimals="INF" unitRef="EUR">294</bd-i-ext2:MonthlyAmount>
+      <bd-i-ext2:Name contextRef="CD_Child_ChildRelatedBudget001">A F-OUT-HR-KI-KO-ZO-07-A001-03</bd-i-ext2:Name>
+      <bd-i-ext2:Name contextRef="CD_Child_DayCareAllowance001">A F-OUT-HR-KI-KO-ZO-07-A001-03</bd-i-ext2:Name>
+      <bd-i-ext2:Name contextRef="CD_Child_DayCareAllowance002">A F-OUT-HR-KI-KO-ZO-07-A001-03</bd-i-ext2:Name>
+      <bd-i-ext2:Name contextRef="CD_Child_DayCareAllowance003">A F-OUT-HR-KI-KO-ZO-07-A001-03</bd-i-ext2:Name>
+      <bd-i-ext2:PartYearConclusion contextRef="CD_Declarant_DayCareAllowance002">U hebt (een deel van) dit jaar geen recht op toeslag, omdat uw toeslagpartner niet rechtmatig in Nederland verblijft.</bd-i-ext2:PartYearConclusion>
+      <bd-i-ext2:PartYearFinancialCapacity contextRef="CD_Declarant_CareAllowance001" decimals="INF" unitRef="EUR">24000</bd-i-ext2:PartYearFinancialCapacity>
+      <bd-i-ext2:PartYearFinancialCapacity contextRef="CD_Declarant_ChildRelatedBudget001" decimals="INF" unitRef="EUR">24000</bd-i-ext2:PartYearFinancialCapacity>
+      <bd-i-ext2:PartYearFinancialCapacity contextRef="CD_Declarant_DayCareAllowance001" decimals="INF" unitRef="EUR">24000</bd-i-ext2:PartYearFinancialCapacity>
+      <bd-i-ext2:PartYearFinancialCapacity contextRef="CD_Declarant_DayCareAllowance002" decimals="INF" unitRef="EUR">24000</bd-i-ext2:PartYearFinancialCapacity>
+      <bd-i-ext2:PartYearFinancialCapacity contextRef="CD_Declarant_DayCareAllowance003" decimals="INF" unitRef="EUR">24000</bd-i-ext2:PartYearFinancialCapacity>
+      <bd-i-ext2:PartYearFinancialCapacity contextRef="CD_Declarant_RentAllowance001" decimals="INF" unitRef="EUR">24000</bd-i-ext2:PartYearFinancialCapacity>
+      <bd-i-ext2:PartYearMonthlyAmount contextRef="CD_Declarant_CareAllowance001" decimals="INF" unitRef="EUR">50</bd-i-ext2:PartYearMonthlyAmount>
+      <bd-i-ext2:PartYearMonthlyAmount contextRef="CD_Declarant_ChildRelatedBudget001" decimals="INF" unitRef="EUR">82</bd-i-ext2:PartYearMonthlyAmount>
+      <bd-i-ext2:PartYearMonthlyAmount contextRef="CD_Declarant_DayCareAllowance001" decimals="INF" unitRef="EUR">294</bd-i-ext2:PartYearMonthlyAmount>
+      <bd-i-ext2:PartYearMonthlyAmount contextRef="CD_Declarant_DayCareAllowance002" decimals="INF" unitRef="EUR">0</bd-i-ext2:PartYearMonthlyAmount>
+      <bd-i-ext2:PartYearMonthlyAmount contextRef="CD_Declarant_DayCareAllowance003" decimals="INF" unitRef="EUR">294</bd-i-ext2:PartYearMonthlyAmount>
+      <bd-i-ext2:PartYearMonthlyAmount contextRef="CD_Declarant_RentAllowance001" decimals="INF" unitRef="EUR">75</bd-i-ext2:PartYearMonthlyAmount>
+      <bd-i-ext2:PlainRent contextRef="CD_Declarant_RentAllowance001" decimals="INF" unitRef="EUR">400.00</bd-i-ext2:PlainRent>
+      <bd-i-ext2:ReferenceIncome contextRef="CD_Declarant" decimals="INF" unitRef="EUR">16000</bd-i-ext2:ReferenceIncome>
+      <bd-i-ext2:ReferenceIncome contextRef="CD_Inhabitant_RentAllowance001" decimals="INF" unitRef="EUR">0</bd-i-ext2:ReferenceIncome>
+      <bd-i-ext2:ReferenceIncome contextRef="CD_Partner_CareAllowance001" decimals="INF" unitRef="EUR">8000</bd-i-ext2:ReferenceIncome>
+      <bd-i-ext2:ReferenceIncome contextRef="CD_Partner_ChildRelatedBudget001" decimals="INF" unitRef="EUR">8000</bd-i-ext2:ReferenceIncome>
+      <bd-i-ext2:ReferenceIncome contextRef="CD_Partner_DayCareAllowance001" decimals="INF" unitRef="EUR">8000</bd-i-ext2:ReferenceIncome>
+      <bd-i-ext2:ReferenceIncome contextRef="CD_Partner_DayCareAllowance002" decimals="INF" unitRef="EUR">8000</bd-i-ext2:ReferenceIncome>
+      <bd-i-ext2:ReferenceIncome contextRef="CD_Partner_DayCareAllowance003" decimals="INF" unitRef="EUR">8000</bd-i-ext2:ReferenceIncome>
+      <bd-i-ext2:ReferenceIncome contextRef="CD_Partner_RentAllowance001" decimals="INF" unitRef="EUR">8000</bd-i-ext2:ReferenceIncome>
+      <bd-i-ext2:ServiceRecreationRoomCosts contextRef="CD_Declarant_RentAllowance001" decimals="INF" unitRef="EUR">0.00</bd-i-ext2:ServiceRecreationRoomCosts>
+      <!--    <bd-i:Surname contextRef="CD_Declarant">A F-OUT-HR-KI-KO-ZO-07-A001-01</bd-i:Surname>-->
+      <bd-i:Surname contextRef="CD_Inhabitant_RentAllowance001">A F-OUT-HR-KI-KO-ZO-07-A001-03</bd-i:Surname>
+      <bd-i:Surname contextRef="CD_Partner_CareAllowance001">A F-OUT-HR-KI-KO-ZO-07-A001-02</bd-i:Surname>
+      <bd-i:Surname contextRef="CD_Partner_ChildRelatedBudget001">A F-OUT-HR-KI-KO-ZO-07-A001-02</bd-i:Surname>
+      <bd-i:Surname contextRef="CD_Partner_DayCareAllowance001">A F-OUT-HR-KI-KO-ZO-07-A001-02</bd-i:Surname>
+      <bd-i:Surname contextRef="CD_Partner_DayCareAllowance002">A F-OUT-HR-KI-KO-ZO-07-A001-02</bd-i:Surname>
+      <bd-i:Surname contextRef="CD_Partner_DayCareAllowance003">A F-OUT-HR-KI-KO-ZO-07-A001-02</bd-i:Surname>
+      <bd-i:Surname contextRef="CD_Partner_RentAllowance001">A F-OUT-HR-KI-KO-ZO-07-A001-02</bd-i:Surname>
+      <bd-i:TaxReturnMessageType contextRef="CD_Algemeen">TL114</bd-i:TaxReturnMessageType>
+      <bd-t-ext2:DayCareDataSpecification>
+        <bd-t:AddressPresentation>
+          <bd-i:HouseNumberNL contextRef="CD_Child_DayCareAllowance001" decimals="INF" unitRef="PURE">56</bd-i:HouseNumberNL>
+          <bd-i:PlaceOfResidenceNL contextRef="CD_Child_DayCareAllowance001">ALMERE POORT</bd-i:PlaceOfResidenceNL>
+          <bd-i:PostalCodeNL contextRef="CD_Child_DayCareAllowance001">1363GA</bd-i:PostalCodeNL>
+          <bd-i:StreetNameNL contextRef="CD_Child_DayCareAllowance001">Marco Poloroute</bd-i:StreetNameNL>
+        </bd-t:AddressPresentation>
+        <bd-i-ext2:DayCareHourlyRate contextRef="CD_Child_DayCareAllowance001" decimals="INF" unitRef="EUR">12.00</bd-i-ext2:DayCareHourlyRate>
+        <bd-i-ext2:DayCareHours contextRef="CD_Child_DayCareAllowance001" decimals="INF" unitRef="PURE">100</bd-i-ext2:DayCareHours>
+        <bd-i-ext2:DayCareIdentificationNumber contextRef="CD_Child_DayCareAllowance001">610069524</bd-i-ext2:DayCareIdentificationNumber>
+        <bd-i-ext2:DayCareInstitutionType contextRef="CD_Child_DayCareAllowance001">gastouderopvang</bd-i-ext2:DayCareInstitutionType>
+        <bd-i-ext2:DayCareName contextRef="CD_Child_DayCareAllowance001">De Wegwijzer</bd-i-ext2:DayCareName>
+        <bd-i-ext2:DayCareType contextRef="CD_Child_DayCareAllowance001">buitenschoolse opvang</bd-i-ext2:DayCareType>
+      </bd-t-ext2:DayCareDataSpecification>
+      <bd-t-ext2:DayCareDataSpecification>
+        <bd-t:AddressPresentation>
+          <bd-i:HouseNumberNL contextRef="CD_Child_DayCareAllowance002" decimals="INF" unitRef="PURE">56</bd-i:HouseNumberNL>
+          <bd-i:PlaceOfResidenceNL contextRef="CD_Child_DayCareAllowance002">ALMERE POORT</bd-i:PlaceOfResidenceNL>
+          <bd-i:PostalCodeNL contextRef="CD_Child_DayCareAllowance002">1363GA</bd-i:PostalCodeNL>
+          <bd-i:StreetNameNL contextRef="CD_Child_DayCareAllowance002">Marco Poloroute</bd-i:StreetNameNL>
+        </bd-t:AddressPresentation>
+        <bd-i-ext2:DayCareHourlyRate contextRef="CD_Child_DayCareAllowance002" decimals="INF" unitRef="EUR">12.00</bd-i-ext2:DayCareHourlyRate>
+        <bd-i-ext2:DayCareHours contextRef="CD_Child_DayCareAllowance002" decimals="INF" unitRef="PURE">100</bd-i-ext2:DayCareHours>
+        <bd-i-ext2:DayCareIdentificationNumber contextRef="CD_Child_DayCareAllowance002">610069524</bd-i-ext2:DayCareIdentificationNumber>
+        <bd-i-ext2:DayCareInstitutionType contextRef="CD_Child_DayCareAllowance002">gastouderopvang</bd-i-ext2:DayCareInstitutionType>
+        <bd-i-ext2:DayCareName contextRef="CD_Child_DayCareAllowance002">De Wegwijzer</bd-i-ext2:DayCareName>
+        <bd-i-ext2:DayCareType contextRef="CD_Child_DayCareAllowance002">buitenschoolse opvang</bd-i-ext2:DayCareType>
+      </bd-t-ext2:DayCareDataSpecification>
+      <bd-t-ext2:DayCareDataSpecification>
+        <bd-t:AddressPresentation>
+          <bd-i:HouseNumberNL contextRef="CD_Child_DayCareAllowance003" decimals="INF" unitRef="PURE">56</bd-i:HouseNumberNL>
+          <bd-i:PlaceOfResidenceNL contextRef="CD_Child_DayCareAllowance003">ALMERE POORT</bd-i:PlaceOfResidenceNL>
+          <bd-i:PostalCodeNL contextRef="CD_Child_DayCareAllowance003">1363GA</bd-i:PostalCodeNL>
+          <bd-i:StreetNameNL contextRef="CD_Child_DayCareAllowance003">Marco Poloroute</bd-i:StreetNameNL>
+        </bd-t:AddressPresentation>
+        <bd-i-ext2:DayCareHourlyRate contextRef="CD_Child_DayCareAllowance003" decimals="INF" unitRef="EUR">12.00</bd-i-ext2:DayCareHourlyRate>
+        <bd-i-ext2:DayCareHours contextRef="CD_Child_DayCareAllowance003" decimals="INF" unitRef="PURE">100</bd-i-ext2:DayCareHours>
+        <bd-i-ext2:DayCareIdentificationNumber contextRef="CD_Child_DayCareAllowance003">610069524</bd-i-ext2:DayCareIdentificationNumber>
+        <bd-i-ext2:DayCareInstitutionType contextRef="CD_Child_DayCareAllowance003">gastouderopvang</bd-i-ext2:DayCareInstitutionType>
+        <bd-i-ext2:DayCareName contextRef="CD_Child_DayCareAllowance003">De Wegwijzer</bd-i-ext2:DayCareName>
+        <bd-i-ext2:DayCareType contextRef="CD_Child_DayCareAllowance003">buitenschoolse opvang</bd-i-ext2:DayCareType>
+      </bd-t-ext2:DayCareDataSpecification>
+      <bd-t-ext2:RentalObjectAddressPresentation>
+        <bd-t:AddressPresentation>
+          <!--    <bd-i:HouseNumberNL contextRef="CD_Declarant_RentAllowance001" decimals="INF" unitRef="PURE">211</bd-i:HouseNumberNL>-->
+          <!--    <bd-i:PlaceOfResidenceNL contextRef="CD_Declarant_RentAllowance001">Amsterdam</bd-i:PlaceOfResidenceNL>-->
+          <!--    <bd-i:PostalCodeNL contextRef="CD_Declarant_RentAllowance001">1012XC</bd-i:PostalCodeNL>-->
+          <!--    <bd-i:StreetNameNL contextRef="CD_Declarant_RentAllowance001">Kalverstraat</bd-i:StreetNameNL>-->
+        </bd-t:AddressPresentation>
+      </bd-t-ext2:RentalObjectAddressPresentation>
+    </ix:resources>
+  </ix:header>
+</div>
+</body>
+</html>
