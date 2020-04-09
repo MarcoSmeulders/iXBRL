@@ -276,16 +276,16 @@
   <div class="berekening" style="top: 280pt">
     <div class="paragraph-header">Uw zorgtoeslag voor <ix:nonNumeric contextRef='CD_Algemeen' name='bd-i-ext2:AllowanceYear'>2020</ix:nonNumeric> wordt &#8364;<ix:nonFraction contextRef='CD_Declarant_CareAllowance' format='ixt:num-comma-decimal' name='bd-i-ext2:DisposalYearAmount' decimals="INF" unitRef="EUR">550</ix:nonFraction>.</div>
     <div class="text-normal">Wij hebben uw zorgtoeslag berekend voor de periode vanaf <ix:nonNumeric contextRef='CD_Declarant_CareAllowance' format='ixt:date-day-monthname-year-nl' name='bd-i-ext2:AllowanceStartDate'>1 februari 2020</ix:nonNumeric>.</div>
-    <div class="text-normal">Het beschikkingsnummer is <ix:nonNumeric contextRef='CD_Declarant_CareAllowance' name='bd-i-ext2:DisposalNumber'>7810.05.553.T.20.0.5133</ix:nonNumeric>.</div>
+    <div class="text-normal">Het beschikkingsnummer is 7810.05.553.T.20.0.5133.</div>
     <div class="paragraph-header">Uw kindgebonden budget voor <ix:nonNumeric contextRef='CD_Algemeen' name='bd-i-ext2:AllowanceYear'>2020</ix:nonNumeric> wordt &#8364;<ix:nonFraction  contextRef='CD_Declarant_ChildRelatedBudget' format='ixt:num-comma-decimal' name='bd-i-ext2:DisposalYearAmount' decimals="INF" unitRef="EUR">911</ix:nonFraction>.</div>
     <div class="text-normal">Wij hebben uw kindgebonden budget berekend voor de periode vanaf <ix:nonNumeric contextRef='CD_Declarant_ChildRelatedBudget' format='ixt:date-day-monthname-year-nl' name='bd-i-ext2:AllowanceStartDate'>1 februari 2020</ix:nonNumeric>.</div>
-    <div class="text-normal">Het beschikkingsnummer is <ix:nonNumeric contextRef='CD_Declarant_ChildRelatedBudget' name='bd-i-ext2:DisposalNumber'>7810.05.553.T.20.0.5134</ix:nonNumeric>.</div>
+    <div class="text-normal">Het beschikkingsnummer is 7810.05.553.T.20.0.5134.</div>
     <div class="paragraph-header">Uw huurtoeslag voor <ix:nonNumeric contextRef='CD_Algemeen' name='bd-i-ext2:AllowanceYear'>2020</ix:nonNumeric> wordt &#8364;<ix:nonFraction  contextRef='CD_Declarant_RentAllowance' format='ixt:num-comma-decimal' name='bd-i-ext2:DisposalYearAmount' decimals="INF" unitRef="EUR">827</ix:nonFraction>.</div>
     <div class="text-normal">Wij hebben uw huurtoeslag berekend voor de periode vanaf <ix:nonNumeric contextRef='CD_Declarant_RentAllowance' format='ixt:date-day-monthname-year-nl' name='bd-i-ext2:AllowanceStartDate'>1 februari 2020</ix:nonNumeric>.</div>
-    <div class="text-normal">Het beschikkingsnummer is <ix:nonNumeric contextRef='CD_Declarant_RentAllowance' name='bd-i-ext2:DisposalNumber'>7810.05.553.T.20.0.5132</ix:nonNumeric>.</div>
+    <div class="text-normal">Het beschikkingsnummer is 7810.05.553.T.20.0.5132.</div>
     <div class="paragraph-header">Uw kinderopvangtoeslag voor <ix:nonNumeric contextRef='CD_Algemeen' name='bd-i-ext2:AllowanceYear'>2020</ix:nonNumeric> wordt &#8364;<ix:nonFraction contextRef='CD_Declarant_DayCareAllowance' format='ixt:num-comma-decimal' name='bd-i-ext2:DisposalYearAmount' decimals="INF" unitRef="EUR">3.433</ix:nonFraction>.</div>
     <div class="text-normal">Wij hebben uw kinderopvangtoeslag berekend voor de periode vanaf <ix:nonNumeric contextRef='CD_Declarant_DayCareAllowance' format='ixt:date-day-monthname-year-nl' name='bd-i-ext2:AllowanceStartDate'>10 januari 2020</ix:nonNumeric>.</div>
-    <div class="text-normal">Het beschikkingsnummer is <ix:nonNumeric contextRef='CD_Declarant_DayCareAllowance' name='bd-i-ext2:DisposalNumber'>7810.05.553.T.20.0.5131</ix:nonNumeric>.</div>
+    <div class="text-normal">Het beschikkingsnummer is 7810.05.553.T.20.0.5131.</div>
   </div>
   <div class="bericht" style="top:480pt; height: 150pt; ">
     <div class="paragraph-header">Specificatie gegevens</div>
@@ -323,6 +323,10 @@
 <div class='hidden'>
   <ix:header>
     <ix:hidden>
+      <ix:nonNumeric contextRef='CD_Declarant_CareAllowance' name='bd-i-ext2:DisposalNumber'>781005553T2005133</ix:nonNumeric>
+      <ix:nonNumeric contextRef='CD_Declarant_ChildRelatedBudget' name='bd-i-ext2:DisposalNumber'>781005553T2005134</ix:nonNumeric>
+      <ix:nonNumeric contextRef='CD_Declarant_RentAllowance' name='bd-i-ext2:DisposalNumber'>781005553T2005132</ix:nonNumeric>
+      <ix:nonNumeric contextRef='CD_Declarant_DayCareAllowance' name='bd-i-ext2:DisposalNumber'>781005553T2005131</ix:nonNumeric>
       <ix:tuple name='bd-t-ext2:DayCareDataSpecification' tupleID='T1'/>
       <ix:tuple name='bd-t:AddressPresentation' tupleRef='T1' tupleID='T2' order='1'/>
       <ix:nonFraction name='bd-i:HouseNumberNL' contextRef="CD_Child_DayCareAllowance001" decimals="INF" unitRef="PURE" tupleRef='T2' order='1'>56</ix:nonFraction>
@@ -363,7 +367,7 @@
       <ix:nonNumeric name='bd-i-ext2:DayCareType' contextRef="CD_Child_DayCareAllowance003" tupleRef='T5' order='7'>buitenschoolse opvang</ix:nonNumeric>
 
       <ix:tuple name='bd-t-ext2:RentalObjectAddressPresentation' tupleID='T7'/>
-      <ix:tuple name='bd-t:AddressPresentation' tupleID='T8'/>
+      <ix:tuple name='bd-t:AddressPresentation' tupleID='T8' tupleRef='T7' order='1'/>
 
       <ix:nonFraction name='bd-i-ext2:AccountingRent' contextRef="CD_Declarant_RentAllowance001" decimals="INF" unitRef="EUR">400.00</ix:nonFraction>
       <!--    <ix:nonNumeric name='bd-i-ext2:AllowanceStartDate' contextRef="CD_Declarant_CareAllowance">2020-02-01</ix:nonNumeric>-->
