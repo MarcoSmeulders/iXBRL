@@ -1,4 +1,3 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html
     xmlns="http://www.w3.org/1999/xhtml"
     xmlns:link="http://www.xbrl.org/2003/linkbase"
@@ -12,17 +11,28 @@
     xmlns:bd-dim-dim-ext2="http://www.nltaxonomie.nl/nt13/bd/20190918/validation/bd-axes-ext2"
     xmlns:bd-dim-mem="http://www.nltaxonomie.nl/nt13/bd/20181212/dictionary/bd-domain-members"
     xmlns:bd-dim-mem-ext2="http://www.nltaxonomie.nl/nt13/bd/20190918/dictionary/bd-domain-members-ext2"
+    xmlns:bd-t="http://www.nltaxonomie.nl/nt13/bd/20181212/dictionary/bd-tuples"
     xmlns:bd-i="http://www.nltaxonomie.nl/nt13/bd/20181212/dictionary/bd-data"
     xmlns:bd-i-ext2="http://www.nltaxonomie.nl/nt13/bd/20190918/dictionary/bd-data-ext2"
     xmlns:bd-t-ext2="http://www.nltaxonomie.nl/nt13/bd/20190918/dictionary/bd-tuples-ext2"
     xml:lang="nl"
-    lang="nl"
 >
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="Content-Style-Type" content="text/css" />
   <title>Voorbeeld specificatie DT zorg</title>
   <style type="text/css">
+    @font-face {
+      font-family: "KIXBarcode";
+      src: url("./fonts/Kixbrg.eot"); /* IE9 Compat Modes */
+      src:
+          url("./fonts/Kixbrg.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+          url("./fonts/Kixbrg.woff2") format("woff2"), /* Modern Browsers */
+          url("./fonts/Kixbrg.woff") format("woff"), /* Modern Browsers */
+          url("./fonts/Kixbrg.ttf") format("truetype"), /* Safari, Android, iOS */
+          url("./fonts/Kixbrg.svg") format("svg"); /* Legacy iOS */
+    }
+
     * {
       box-sizing: border-box
     }
@@ -43,12 +53,23 @@
     }
 
     .page {
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: Helvetica, Arial, sans-serif;
       color: #000000;
       position: relative;
       width: 595.3pt;
       height: 841.9pt;
       page-break-after: always;
+    }
+
+    #barcode {
+      font-family: "KIXBarcode", monospace;
+      font-size: 10pt; /* PostNL required font size is 10pt */
+      position: absolute;
+      left: 70pt;
+      top: 145pt;
+      width: 300pt;
+      height: 10pt;
+      line-height: 1em;
     }
 
     .container-heading1 {
@@ -109,32 +130,32 @@
     .bericht {
       position: absolute;
       left: 70pt;
-      width: 480pt;
+      width: 460pt;
     }
 
-    .text-smallest {
-      font-size: 8pt;
+    .text-small-7 {
+      font-size: 7.0pt;
+      letter-spacing: 0.15pt;
       white-space: pre;
-      letter-spacing: 0.25pt;
     }
 
-    .text-small {
-      font-size: 9pt;
+    .text-small-8 {
+      font-size: 8.0pt;
+      letter-spacing: 0.15pt;
       white-space: pre;
-      letter-spacing: 0.25pt;
     }
 
     .text-normal {
-      font-size: 9.5pt;
+      font-size: 9.0pt;
       letter-spacing: 0.15pt;
       line-height: 1.4;
     }
 
     .paragraph-header {
-      font-size: 9.5pt;
-      white-space: pre;
+      font-size: 10.0pt;
       font-weight: bold;
-      letter-spacing: 0.2pt;
+      letter-spacing: 0.15pt;
+      white-space: pre;
     }
 
     .text-normal + .paragraph-header {
@@ -145,13 +166,11 @@
       font-size: 12pt;
       font-weight: bold;
       position: absolute;
-      letter-spacing: 0.2pt;
     }
 
     .info-subtitle {
-      font-size: 13pt;
+      font-size: 12pt;
       position: absolute;
-      letter-spacing: 0.2pt;
     }
 
     .document-title {
@@ -231,7 +250,7 @@
     <div class="document-title">Toeslagen</div>
     <div class="document-subtitle" style="top: 20.35pt">Belastingdienst</div>
     <div class="arrow" style="top:44pt;">&gt;</div>
-    <div class="text-smallest" style="top:50pt; left: 12.8pt; position: absolute;">Postbus 4510, 6401 JA Heerlen</div>
+    <div class="text-small-8" style="top:50pt; left: 12.8pt; position: absolute;">Postbus 4510, 6401 JA Heerlen</div>
   </div>
   <div id="container-heading2">
     <div class="document-info">
@@ -239,44 +258,45 @@
       <div class="info-subtitle" style="top: 14pt">Toeslagen</div>
     </div>
     <div class="document-info" style="top: 50pt;">
-      <div class="text-smallest" style="top: 5pt">Internet</div>
-      <div class="text-small" style="top: 15pt">toeslagen.nl</div>
+      <div class="text-small-7" style="top: 5pt">Internet</div>
+      <div class="text-normal" style="top: 15pt">toeslagen.nl</div>
     </div>
     <div class="document-info" style="top: 84pt;">
-      <div class="text-smallest" style="top: 5pt">Kenmerk</div>
-      <div class="text-small" style="top: 15pt"><ix:nonNumeric contextRef='CD_Algemeen' name='bd-i-ext2:MessageAttribute'>7810.05.553.T.SC.20.2</ix:nonNumeric></div>
+      <div class="text-small-7" style="top: 5pt">Kenmerk</div>
+      <div class="text-normal" style="top: 15pt"><ix:nonNumeric contextRef='CD_Algemeen' name='bd-i-ext2:MessageAttribute'>7810.05.553.T.SC.20.2</ix:nonNumeric></div>
     </div>
     <div class="document-info" style="top: 118pt;">
-      <div class="text-smallest" style="top: 5pt">Datum</div>
-      <div class="text-small" style="top: 15pt"><ix:nonNumeric contextRef='CD_Algemeen' format='ixt:dateDayMonthnameYearNlType' name='bd-i:NoticeOfAssessmentDate'>6 maart 2020</ix:nonNumeric></div>
+      <div class="text-small-7" style="top: 5pt">Datum</div>
+      <div class="text-normal" style="top: 15pt"><ix:nonNumeric contextRef='CD_Algemeen' format='ixt:date-day-monthname-year-nl' name='bd-i:NoticeOfAssessmentDate'>6 maart 2020</ix:nonNumeric></div>
     </div>
   </div>
   <div id="container-heading4">
     <div class="document-year">
-      <div class="info-title"><ix:nonNumeric contextRef='CD_Algemeen' name='bd-i-ext2:AllowanceYear' decimals="INF" >2020</ix:nonNumeric></div>
+      <div class="info-title"><ix:nonNumeric contextRef='CD_Algemeen' name='bd-i-ext2:AllowanceYear'>2020</ix:nonNumeric></div>
     </div>
   </div>
   <div id="naw">
     <div class="text-normal uppercase"><ix:nonNumeric contextRef='CD_Declarant' name='bd-i:Surname'>A F-OUT-HR-KI-KO-ZO-07-A001-01</ix:nonNumeric></div>
-    <div class="text-normal uppercase"><ix:nonNumeric contextRef='CD_Declarant_RentAllowance001' name='bd-i:StreetNameNL' tupleRef='T8' order='1'>Kalverstraat</ix:nonNumeric> <ix:nonNumeric contextRef='CD_Declarant_RentAllowance001' name='bd-i:HouseNumberNL' tupleRef='T8' order='1'>211</ix:nonNumeric></div>
-    <div class="text-normal uppercase"><ix:nonNumeric contextRef='CD_Declarant_RentAllowance001' name='bd-i:PostalCodeNL' tupleRef='T8' order='1'>1012XC</ix:nonNumeric> <ix:nonNumeric contextRef='CD_Declarant_RentAllowance001' name='bd-i:PlaceOfResidenceNL' tupleRef='T8' order='1'>Amsterdam</ix:nonNumeric></div>
+    <div class="text-normal uppercase"><ix:nonNumeric contextRef='CD_Declarant_RentAllowance001' name='bd-i:StreetNameNL' tupleRef='T8' order='4'>Kalverstraat</ix:nonNumeric> <ix:nonFraction contextRef='CD_Declarant_RentAllowance001' name='bd-i:HouseNumberNL' decimals="INF" unitRef="PURE" tupleRef='T8' order='1'>211</ix:nonFraction></div>
+    <div class="text-normal uppercase"><ix:nonNumeric contextRef='CD_Declarant_RentAllowance001' name='bd-i:PostalCodeNL' tupleRef='T8' order='3'>1012XC</ix:nonNumeric> <ix:nonNumeric contextRef='CD_Declarant_RentAllowance001' name='bd-i:PlaceOfResidenceNL' tupleRef='T8' order='2'>Amsterdam</ix:nonNumeric></div>
   </div>
+  <div id="barcode">1012XC211</div>
   <div class="bericht" style="top:248pt;">
     <div class="paragraph-header">Wij hebben uw toeslag(en) voor <ix:nonNumeric contextRef='CD_Algemeen' name='bd-i-ext2:AllowanceYear'>2020</ix:nonNumeric> (opnieuw) berekend.</div>
   </div>
   <div class="berekening" style="top: 280pt">
-    <div class="paragraph-header">Uw zorgtoeslag voor <ix:nonNumeric contextRef='CD_Algemeen' name='bd-i-ext2:AllowanceYear'>2020</ix:nonNumeric> wordt &euro;<ix:nonNumeric contextRef='CD_Declarant_CareAllowance' name='bd-i-ext2:DisposalYearAmount' decimals="INF" unitRef="EUR" >550</ix:nonNumeric>.</div>
-    <div class="text-normal">Wij hebben uw zorgtoeslag berekend voor de periode vanaf <ix:nonNumeric contextRef='CD_Declarant_CareAllowance' format='ixt:dateDayMonthnameYearNlType' name='bd-i-ext2:AllowanceStartDate'>1 februari 2020</ix:nonNumeric>.</div>
-    <div class="text-normal">Het beschikkingsnummer is <ix:nonNumeric contextRef='CD_Declarant_CareAllowance' name='bd-i-ext2:DisposalNumber'>781005553T2005133</ix:nonNumeric>.</div>
-    <div class="paragraph-header">Uw kindgebonden budget voor <ix:nonNumeric contextRef='CD_Algemeen' name='bd-i-ext2:AllowanceYear'>2020</ix:nonNumeric> wordt &euro;<ix:nonNumeric contextRef='CD_Declarant_ChildRelatedBudget' name='bd-i-ext2:DisposalYearAmount' decimals="INF" unitRef="EUR" >911</ix:nonNumeric>.</div>
-    <div class="text-normal">Wij hebben uw kindgebonden budget berekend voor de periode vanaf <ix:nonNumeric contextRef='CD_Declarant_ChildRelatedBudget' format='ixt:dateDayMonthnameYearNlType' name='bd-i-ext2:AllowanceStartDate'>1 februari 2020</ix:nonNumeric>.</div>
-    <div class="text-normal">Het beschikkingsnummer is <ix:nonNumeric contextRef='CD_Declarant_ChildRelatedBudget' name='bd-i-ext2:DisposalNumber'>781005553T2005134</ix:nonNumeric>.</div>
-    <div class="paragraph-header">Uw huurtoeslag voor <ix:nonNumeric contextRef='CD_Algemeen' name='bd-i-ext2:AllowanceYear'>2020</ix:nonNumeric> wordt &euro;<ix:nonNumeric contextRef='CD_Declarant_RentAllowance' name='bd-i-ext2:DisposalYearAmount' decimals="INF" unitRef="EUR" >827</ix:nonNumeric>.</div>
-    <div class="text-normal">Wij hebben uw huurtoeslag berekend voor de periode vanaf <ix:nonNumeric contextRef='CD_Declarant_RentAllowance' format='ixt:dateDayMonthnameYearNlType' name='bd-i-ext2:AllowanceStartDate'>1 februari 2020</ix:nonNumeric>.</div>
-    <div class="text-normal">Het beschikkingsnummer is <ix:nonNumeric contextRef='CD_Declarant_RentAllowance' name='bd-i-ext2:DisposalNumber'>781005553T2005132</ix:nonNumeric>.</div>
-    <div class="paragraph-header">Uw kinderopvangtoeslag voor <ix:nonNumeric contextRef='CD_Algemeen' name='bd-i-ext2:AllowanceYear'>2020</ix:nonNumeric> wordt &euro;<ix:nonNumeric contextRef='CD_Declarant_DayCareAllowance' format='ixt:num-unit-decimal' name='bd-i-ext2:DisposalYearAmount' decimals="INF" unitRef="EUR" >3433</ix:nonNumeric>.</div>
-    <div class="text-normal">Wij hebben uw kinderopvangtoeslag berekend voor de periode vanaf <ix:nonNumeric contextRef='CD_Declarant_DayCareAllowance' format='ixt:dateDayMonthnameYearNlType' name='bd-i-ext2:AllowanceStartDate'>10 januari 2020</ix:nonNumeric>.</div>
-    <div class="text-normal">Het beschikkingsnummer is <ix:nonNumeric contextRef='CD_Declarant_DayCareAllowance' name='bd-i-ext2:DisposalNumber'>781005553T2005131</ix:nonNumeric>.</div>
+    <div class="paragraph-header">Uw zorgtoeslag voor <ix:nonNumeric contextRef='CD_Algemeen' name='bd-i-ext2:AllowanceYear'>2020</ix:nonNumeric> wordt &#8364;<ix:nonFraction contextRef='CD_Declarant_CareAllowance' format='ixt:num-comma-decimal' name='bd-i-ext2:DisposalYearAmount' decimals="INF" unitRef="EUR">550</ix:nonFraction>.</div>
+    <div class="text-normal">Wij hebben uw zorgtoeslag berekend voor de periode vanaf <ix:nonNumeric contextRef='CD_Declarant_CareAllowance' format='ixt:date-day-monthname-year-nl' name='bd-i-ext2:AllowanceStartDate'>1 februari 2020</ix:nonNumeric>.</div>
+    <div class="text-normal">Het beschikkingsnummer is <ix:nonNumeric contextRef='CD_Declarant_CareAllowance' name='bd-i-ext2:DisposalNumber'>7810.05.553.T.20.0.5133</ix:nonNumeric>.</div>
+    <div class="paragraph-header">Uw kindgebonden budget voor <ix:nonNumeric contextRef='CD_Algemeen' name='bd-i-ext2:AllowanceYear'>2020</ix:nonNumeric> wordt &#8364;<ix:nonFraction  contextRef='CD_Declarant_ChildRelatedBudget' format='ixt:num-comma-decimal' name='bd-i-ext2:DisposalYearAmount' decimals="INF" unitRef="EUR">911</ix:nonFraction>.</div>
+    <div class="text-normal">Wij hebben uw kindgebonden budget berekend voor de periode vanaf <ix:nonNumeric contextRef='CD_Declarant_ChildRelatedBudget' format='ixt:date-day-monthname-year-nl' name='bd-i-ext2:AllowanceStartDate'>1 februari 2020</ix:nonNumeric>.</div>
+    <div class="text-normal">Het beschikkingsnummer is <ix:nonNumeric contextRef='CD_Declarant_ChildRelatedBudget' name='bd-i-ext2:DisposalNumber'>7810.05.553.T.20.0.5134</ix:nonNumeric>.</div>
+    <div class="paragraph-header">Uw huurtoeslag voor <ix:nonNumeric contextRef='CD_Algemeen' name='bd-i-ext2:AllowanceYear'>2020</ix:nonNumeric> wordt &#8364;<ix:nonFraction  contextRef='CD_Declarant_RentAllowance' format='ixt:num-comma-decimal' name='bd-i-ext2:DisposalYearAmount' decimals="INF" unitRef="EUR">827</ix:nonFraction>.</div>
+    <div class="text-normal">Wij hebben uw huurtoeslag berekend voor de periode vanaf <ix:nonNumeric contextRef='CD_Declarant_RentAllowance' format='ixt:date-day-monthname-year-nl' name='bd-i-ext2:AllowanceStartDate'>1 februari 2020</ix:nonNumeric>.</div>
+    <div class="text-normal">Het beschikkingsnummer is <ix:nonNumeric contextRef='CD_Declarant_RentAllowance' name='bd-i-ext2:DisposalNumber'>7810.05.553.T.20.0.5132</ix:nonNumeric>.</div>
+    <div class="paragraph-header">Uw kinderopvangtoeslag voor <ix:nonNumeric contextRef='CD_Algemeen' name='bd-i-ext2:AllowanceYear'>2020</ix:nonNumeric> wordt &#8364;<ix:nonFraction contextRef='CD_Declarant_DayCareAllowance' format='ixt:num-comma-decimal' name='bd-i-ext2:DisposalYearAmount' decimals="INF" unitRef="EUR">3.433</ix:nonFraction>.</div>
+    <div class="text-normal">Wij hebben uw kinderopvangtoeslag berekend voor de periode vanaf <ix:nonNumeric contextRef='CD_Declarant_DayCareAllowance' format='ixt:date-day-monthname-year-nl' name='bd-i-ext2:AllowanceStartDate'>10 januari 2020</ix:nonNumeric>.</div>
+    <div class="text-normal">Het beschikkingsnummer is <ix:nonNumeric contextRef='CD_Declarant_DayCareAllowance' name='bd-i-ext2:DisposalNumber'>7810.05.553.T.20.0.5131</ix:nonNumeric>.</div>
   </div>
   <div class="bericht" style="top:480pt; height: 150pt; ">
     <div class="paragraph-header">Specificatie gegevens</div>
@@ -290,11 +310,11 @@
   <div id="container-heading3" style="top: 25pt">
     <div class="page-info" style="left: 120pt;">
       <div class="text-normal" style="top:1pt;">Datum</div>
-      <div class="text-small" style="top:13pt"><ix:nonNumeric contextRef='CD_Algemeen' format='ixt:dateDayMonthnameYearNlType' name='bd-i:NoticeOfAssessmentDate'>6 maart 2020</ix:nonNumeric></div>
+      <div class="text-normal" style="top:13pt"><ix:nonNumeric contextRef='CD_Algemeen' format='ixt:date-day-monthname-year-nl' name='bd-i:NoticeOfAssessmentDate'>6 maart 2020</ix:nonNumeric></div>
     </div>
     <div class="page-info" style="left: 219pt;">
       <div class="text-normal" style="top:1pt;">Pagina</div>
-      <div class="text-small" style="top:13pt">2 van 2</div>
+      <div class="text-normal" style="top:13pt">2 van 2</div>
     </div>
   </div>
   <div class="chapter-header" style="top:85pt; left: 70pt">Toelichting</div>
@@ -313,19 +333,132 @@
 </div>
 <div class='hidden'>
   <ix:header>
+    <ix:hidden>
+      <ix:tuple name='bd-t-ext2:DayCareDataSpecification' tupleID='T1'/>
+      <ix:tuple name='bd-t:AddressPresentation' tupleRef='T1' tupleID='T2' order='1'/>
+      <ix:nonFraction name='bd-i:HouseNumberNL' contextRef="CD_Child_DayCareAllowance001" decimals="INF" unitRef="PURE" tupleRef='T2' order='1'>56</ix:nonFraction>
+      <ix:nonNumeric name='bd-i:PlaceOfResidenceNL' contextRef="CD_Child_DayCareAllowance001" tupleRef='T2' order='2'>ALMERE POORT</ix:nonNumeric>
+      <ix:nonNumeric name='bd-i:PostalCodeNL' contextRef="CD_Child_DayCareAllowance001" tupleRef='T2' order='3'>1363GA</ix:nonNumeric>
+      <ix:nonNumeric name='bd-i:StreetNameNL' contextRef="CD_Child_DayCareAllowance001" tupleRef='T2' order='4'>Marco Poloroute</ix:nonNumeric>
+      <ix:nonFraction name='bd-i-ext2:DayCareHourlyRate' contextRef="CD_Child_DayCareAllowance001" decimals="INF" unitRef="EUR" tupleRef='T1' order='2'>12.00</ix:nonFraction>
+      <ix:nonFraction name='bd-i-ext2:DayCareHours' contextRef="CD_Child_DayCareAllowance001" decimals="INF" unitRef="PURE" tupleRef='T1' order='3'>100</ix:nonFraction>
+      <ix:nonNumeric name='bd-i-ext2:DayCareIdentificationNumber' contextRef="CD_Child_DayCareAllowance001" tupleRef='T1' order='4'>610069524</ix:nonNumeric>
+      <ix:nonNumeric name='bd-i-ext2:DayCareInstitutionType' contextRef="CD_Child_DayCareAllowance001" tupleRef='T1' order='5'>gastouderopvang</ix:nonNumeric>
+      <ix:nonNumeric name='bd-i-ext2:DayCareName' contextRef="CD_Child_DayCareAllowance001" tupleRef='T1' order='6'>De Wegwijzer</ix:nonNumeric>
+      <ix:nonNumeric name='bd-i-ext2:DayCareType' contextRef="CD_Child_DayCareAllowance001" tupleRef='T1' order='7'>buitenschoolse opvang</ix:nonNumeric>
+
+      <ix:tuple name='bd-t-ext2:DayCareDataSpecification' tupleID='T3'/>
+      <ix:tuple name='bd-t:AddressPresentation' tupleRef='T3' tupleID='T4' order='1'/>
+      <ix:nonFraction name='bd-i:HouseNumberNL' contextRef="CD_Child_DayCareAllowance002" decimals="INF" unitRef="PURE" tupleRef='T4' order='1'>56</ix:nonFraction>
+      <ix:nonNumeric name='bd-i:PlaceOfResidenceNL' contextRef="CD_Child_DayCareAllowance002" tupleRef='T4' order='2'>ALMERE POORT</ix:nonNumeric>
+      <ix:nonNumeric name='bd-i:PostalCodeNL' contextRef="CD_Child_DayCareAllowance002" tupleRef='T4' order='3'>1363GA</ix:nonNumeric>
+      <ix:nonNumeric name='bd-i:StreetNameNL' contextRef="CD_Child_DayCareAllowance002" tupleRef='T4' order='4'>Marco Poloroute</ix:nonNumeric>
+      <ix:nonFraction name='bd-i-ext2:DayCareHourlyRate' contextRef="CD_Child_DayCareAllowance002" decimals="INF" unitRef="EUR" tupleRef='T3' order='2'>12.00</ix:nonFraction>
+      <ix:nonFraction name='bd-i-ext2:DayCareHours' contextRef="CD_Child_DayCareAllowance002" decimals="INF" unitRef="PURE" tupleRef='T3' order='3'>100</ix:nonFraction>
+      <ix:nonNumeric name='bd-i-ext2:DayCareIdentificationNumber' contextRef="CD_Child_DayCareAllowance002" tupleRef='T3' order='4'>610069524</ix:nonNumeric>
+      <ix:nonNumeric name='bd-i-ext2:DayCareInstitutionType' contextRef="CD_Child_DayCareAllowance002" tupleRef='T3' order='5'>gastouderopvang</ix:nonNumeric>
+      <ix:nonNumeric name='bd-i-ext2:DayCareName' contextRef="CD_Child_DayCareAllowance002" tupleRef='T3' order='6'>De Wegwijzer</ix:nonNumeric>
+      <ix:nonNumeric name='bd-i-ext2:DayCareType' contextRef="CD_Child_DayCareAllowance002" tupleRef='T3' order='7'>buitenschoolse opvang</ix:nonNumeric>
+
+      <ix:tuple name='bd-t-ext2:DayCareDataSpecification' tupleID='T5'/>
+      <ix:tuple name='bd-t:AddressPresentation' tupleRef='T5' tupleID='T6' order='1'/>
+      <ix:nonFraction name='bd-i:HouseNumberNL' contextRef="CD_Child_DayCareAllowance003" decimals="INF" unitRef="PURE" tupleRef='T6' order='1'>56</ix:nonFraction>
+      <ix:nonNumeric name='bd-i:PlaceOfResidenceNL' contextRef="CD_Child_DayCareAllowance003" tupleRef='T6' order='2'>ALMERE POORT</ix:nonNumeric>
+      <ix:nonNumeric name='bd-i:PostalCodeNL' contextRef="CD_Child_DayCareAllowance003" tupleRef='T6' order='3'>1363GA</ix:nonNumeric>
+      <ix:nonNumeric name='bd-i:StreetNameNL' contextRef="CD_Child_DayCareAllowance003" tupleRef='T6' order='4'>Marco Poloroute</ix:nonNumeric>
+      <ix:nonFraction name='bd-i-ext2:DayCareHourlyRate' contextRef="CD_Child_DayCareAllowance003" decimals="INF" unitRef="EUR" tupleRef='T5' order='2'>12.00</ix:nonFraction>
+      <ix:nonFraction name='bd-i-ext2:DayCareHours' contextRef="CD_Child_DayCareAllowance003" decimals="INF" unitRef="PURE" tupleRef='T5' order='3'>100</ix:nonFraction>
+      <ix:nonNumeric name='bd-i-ext2:DayCareIdentificationNumber' contextRef="CD_Child_DayCareAllowance003" tupleRef='T5' order='4'>610069524</ix:nonNumeric>
+      <ix:nonNumeric name='bd-i-ext2:DayCareInstitutionType' contextRef="CD_Child_DayCareAllowance003" tupleRef='T5' order='5'>gastouderopvang</ix:nonNumeric>
+      <ix:nonNumeric name='bd-i-ext2:DayCareName' contextRef="CD_Child_DayCareAllowance003" tupleRef='T5' order='6'>De Wegwijzer</ix:nonNumeric>
+      <ix:nonNumeric name='bd-i-ext2:DayCareType' contextRef="CD_Child_DayCareAllowance003" tupleRef='T5' order='7'>buitenschoolse opvang</ix:nonNumeric>
+
+      <ix:tuple name='bd-t-ext2:RentalObjectAddressPresentation' tupleID='T7'/>
+      <ix:tuple name='bd-t:AddressPresentation' tupleID='T8'/>
+
+      <ix:nonFraction name='bd-i-ext2:AccountingRent' contextRef="CD_Declarant_RentAllowance001" decimals="INF" unitRef="EUR">400.00</ix:nonFraction>
+      <!--    <ix:nonNumeric name='bd-i-ext2:AllowanceStartDate' contextRef="CD_Declarant_CareAllowance">2020-02-01</ix:nonNumeric>-->
+      <!--    <ix:nonNumeric name='bd-i-ext2:AllowanceStartDate' contextRef="CD_Declarant_ChildRelatedBudget">2020-02-01</ix:nonNumeric>-->
+      <!--    <ix:nonNumeric name='bd-i-ext2:AllowanceStartDate' contextRef="CD_Declarant_DayCareAllowance">2020-01-10</ix:nonNumeric>-->
+      <!--    <ix:nonNumeric name='bd-i-ext2:AllowanceStartDate' contextRef="CD_Declarant_RentAllowance">2020-02-01</ix:nonNumeric>-->
+      <!--    <ix:nonNumeric name='bd-i-ext2:AllowanceYear' contextRef="CD_Algemeen">2020</ix:nonNumeric>-->
+      <ix:nonFraction name='bd-i-ext2:Caretakercosts' contextRef="CD_Declarant_RentAllowance001" decimals="INF" unitRef="EUR">0.00</ix:nonFraction>
+      <ix:nonFraction name='bd-i-ext2:Cleaningcosts' contextRef="CD_Declarant_RentAllowance001" decimals="INF" unitRef="EUR">0.00</ix:nonFraction>
+      <ix:nonFraction name='bd-i-ext2:DayCareGuestParentsHourlyRateAverage' contextRef="CD_Child_DayCareAllowance001" decimals="INF" unitRef="EUR">5.00</ix:nonFraction>
+      <ix:nonFraction name='bd-i-ext2:DayCareGuestParentsHourlyRateAverage' contextRef="CD_Child_DayCareAllowance002" decimals="INF" unitRef="EUR">5.00</ix:nonFraction>
+      <ix:nonFraction name='bd-i-ext2:DayCareGuestParentsHourlyRateAverage' contextRef="CD_Child_DayCareAllowance003" decimals="INF" unitRef="EUR">5.00</ix:nonFraction>
+      <ix:nonFraction name='bd-i-ext2:DayCareGuestParentsHoursTotal' contextRef="CD_Child_DayCareAllowance001" decimals="INF" unitRef="PURE">100</ix:nonFraction>
+      <ix:nonFraction name='bd-i-ext2:DayCareGuestParentsHoursTotal' contextRef="CD_Child_DayCareAllowance002" decimals="INF" unitRef="PURE">100</ix:nonFraction>
+      <ix:nonFraction name='bd-i-ext2:DayCareGuestParentsHoursTotal' contextRef="CD_Child_DayCareAllowance003" decimals="INF" unitRef="PURE">100</ix:nonFraction>
+      <ix:nonNumeric name='bd-i-ext2:DisposalDate' contextRef="CD_Declarant_CareAllowance">2020-03-06</ix:nonNumeric>
+      <ix:nonNumeric name='bd-i-ext2:DisposalDate' contextRef="CD_Declarant_ChildRelatedBudget">2020-03-06</ix:nonNumeric>
+      <ix:nonNumeric name='bd-i-ext2:DisposalDate' contextRef="CD_Declarant_DayCareAllowance">2020-03-06</ix:nonNumeric>
+      <ix:nonNumeric name='bd-i-ext2:DisposalDate' contextRef="CD_Declarant_RentAllowance">2020-03-06</ix:nonNumeric>
+      <ix:nonNumeric name='bd-i-ext2:DisposalLevelType' contextRef="CD_Declarant_CareAllowance">2</ix:nonNumeric>
+      <ix:nonNumeric name='bd-i-ext2:DisposalLevelType' contextRef="CD_Declarant_ChildRelatedBudget">2</ix:nonNumeric>
+      <ix:nonNumeric name='bd-i-ext2:DisposalLevelType' contextRef="CD_Declarant_DayCareAllowance">2</ix:nonNumeric>
+      <ix:nonNumeric name='bd-i-ext2:DisposalLevelType' contextRef="CD_Declarant_RentAllowance">2</ix:nonNumeric>
+      <!--    <ix:nonNumeric name='bd-i-ext2:DisposalNumber' contextRef="CD_Declarant_CareAllowance">781005553T2005133</ix:nonNumeric>-->
+      <!--    <ix:nonNumeric name='bd-i-ext2:DisposalNumber' contextRef="CD_Declarant_ChildRelatedBudget">781005553T2005134</ix:nonNumeric>-->
+      <!--    <ix:nonNumeric name='bd-i-ext2:DisposalNumber' contextRef="CD_Declarant_DayCareAllowance">781005553T2005131</ix:nonNumeric>-->
+      <!--    <ix:nonNumeric name='bd-i-ext2:DisposalNumber' contextRef="CD_Declarant_RentAllowance">781005553T2005132</ix:nonNumeric>-->
+      <ix:nonFraction name='bd-i-ext2:DisposalTypeMainLevel' contextRef="CD_Algemeen" decimals="INF" unitRef="PURE">1</ix:nonFraction>
+      <ix:nonNumeric name='bd-i-ext2:DisposalYear' contextRef="CD_Algemeen">2020</ix:nonNumeric>
+      <!--    <ix:nonFraction name='bd-i-ext2:DisposalYearAmount' contextRef="CD_Declarant_CareAllowance" decimals="INF" unitRef="EUR">550</ix:nonFraction>-->
+      <!--    <ix:nonFraction name='bd-i-ext2:DisposalYearAmount' contextRef="CD_Declarant_ChildRelatedBudget" decimals="INF" unitRef="EUR">911</ix:nonFraction>-->
+      <!--    <ix:nonFraction name='bd-i-ext2:DisposalYearAmount' contextRef="CD_Declarant_DayCareAllowance" decimals="INF" unitRef="EUR">3433</ix:nonFraction>-->
+      <!--    <ix:nonFraction name='bd-i-ext2:DisposalYearAmount' contextRef="CD_Declarant_RentAllowance" decimals="INF" unitRef="EUR">827</ix:nonFraction>-->
+      <ix:nonFraction name='bd-i-ext2:Energycosts' contextRef="CD_Declarant_RentAllowance001" decimals="INF" unitRef="EUR">0.00</ix:nonFraction>
+      <ix:nonFraction name='bd-i-ext2:ExemptionIncomeHomeResideChild' contextRef="CD_Inhabitant_RentAllowance001" decimals="INF" unitRef="EUR">0</ix:nonFraction>
+      <ix:nonFraction name='bd-i-ext2:HabitatRent' contextRef="CD_Declarant_RentAllowance001" decimals="INF" unitRef="EUR">0.00</ix:nonFraction>
+      <!--    <ix:nonNumeric name='bd-i-ext2:MessageAttribute' contextRef="CD_Algemeen">7810.05.553.T.SC.20.2</ix:nonNumeric>-->
+      <ix:nonNumeric name='bd-i-ext2:MessageDecision' contextRef="CD_Algemeen">U hebt (een deel van) dit jaar geen recht op toeslag, omdat uw toeslagpartner niet rechtmatig in Nederland verblijft.</ix:nonNumeric>
+      <ix:nonNumeric name='bd-i-ext2:MessageEndDate' contextRef="CD_Algemeen">2020-03-02</ix:nonNumeric>
+      <ix:nonNumeric name='bd-i-ext2:MessageStartDate' contextRef="CD_Algemeen">2020-03-02</ix:nonNumeric>
+      <ix:nonFraction name='bd-i-ext2:MonthlyAmount' contextRef="CD_Child_ChildRelatedBudget001" decimals="INF" unitRef="EUR">82</ix:nonFraction>
+      <ix:nonFraction name='bd-i-ext2:MonthlyAmount' contextRef="CD_Child_DayCareAllowance001" decimals="INF" unitRef="EUR">294</ix:nonFraction>
+      <ix:nonFraction name='bd-i-ext2:MonthlyAmount' contextRef="CD_Child_DayCareAllowance002" decimals="INF" unitRef="EUR">0</ix:nonFraction>
+      <ix:nonFraction name='bd-i-ext2:MonthlyAmount' contextRef="CD_Child_DayCareAllowance003" decimals="INF" unitRef="EUR">294</ix:nonFraction>
+      <ix:nonNumeric name='bd-i-ext2:Name' contextRef="CD_Child_ChildRelatedBudget001">A F-OUT-HR-KI-KO-ZO-07-A001-03</ix:nonNumeric>
+      <ix:nonNumeric name='bd-i-ext2:Name' contextRef="CD_Child_DayCareAllowance001">A F-OUT-HR-KI-KO-ZO-07-A001-03</ix:nonNumeric>
+      <ix:nonNumeric name='bd-i-ext2:Name' contextRef="CD_Child_DayCareAllowance002">A F-OUT-HR-KI-KO-ZO-07-A001-03</ix:nonNumeric>
+      <ix:nonNumeric name='bd-i-ext2:Name' contextRef="CD_Child_DayCareAllowance003">A F-OUT-HR-KI-KO-ZO-07-A001-03</ix:nonNumeric>
+      <ix:nonNumeric name='bd-i-ext2:PartYearConclusion' contextRef="CD_Declarant_DayCareAllowance002">U hebt (een deel van) dit jaar geen recht op toeslag, omdat uw toeslagpartner niet rechtmatig in Nederland verblijft.</ix:nonNumeric>
+      <ix:nonFraction name='bd-i-ext2:PartYearFinancialCapacity' contextRef="CD_Declarant_CareAllowance001" decimals="INF" unitRef="EUR">24000</ix:nonFraction>
+      <ix:nonFraction name='bd-i-ext2:PartYearFinancialCapacity' contextRef="CD_Declarant_ChildRelatedBudget001" decimals="INF" unitRef="EUR">24000</ix:nonFraction>
+      <ix:nonFraction name='bd-i-ext2:PartYearFinancialCapacity' contextRef="CD_Declarant_DayCareAllowance001" decimals="INF" unitRef="EUR">24000</ix:nonFraction>
+      <ix:nonFraction name='bd-i-ext2:PartYearFinancialCapacity' contextRef="CD_Declarant_DayCareAllowance002" decimals="INF" unitRef="EUR">24000</ix:nonFraction>
+      <ix:nonFraction name='bd-i-ext2:PartYearFinancialCapacity' contextRef="CD_Declarant_DayCareAllowance003" decimals="INF" unitRef="EUR">24000</ix:nonFraction>
+      <ix:nonFraction name='bd-i-ext2:PartYearFinancialCapacity' contextRef="CD_Declarant_RentAllowance001" decimals="INF" unitRef="EUR">24000</ix:nonFraction>
+      <ix:nonFraction name='bd-i-ext2:PartYearMonthlyAmount' contextRef="CD_Declarant_CareAllowance001" decimals="INF" unitRef="EUR">50</ix:nonFraction>
+      <ix:nonFraction name='bd-i-ext2:PartYearMonthlyAmount' contextRef="CD_Declarant_ChildRelatedBudget001" decimals="INF" unitRef="EUR">82</ix:nonFraction>
+      <ix:nonFraction name='bd-i-ext2:PartYearMonthlyAmount' contextRef="CD_Declarant_DayCareAllowance001" decimals="INF" unitRef="EUR">294</ix:nonFraction>
+      <ix:nonFraction name='bd-i-ext2:PartYearMonthlyAmount' contextRef="CD_Declarant_DayCareAllowance002" decimals="INF" unitRef="EUR">0</ix:nonFraction>
+      <ix:nonFraction name='bd-i-ext2:PartYearMonthlyAmount' contextRef="CD_Declarant_DayCareAllowance003" decimals="INF" unitRef="EUR">294</ix:nonFraction>
+      <ix:nonFraction name='bd-i-ext2:PartYearMonthlyAmount' contextRef="CD_Declarant_RentAllowance001" decimals="INF" unitRef="EUR">75</ix:nonFraction>
+      <ix:nonFraction name='bd-i-ext2:PlainRent' contextRef="CD_Declarant_RentAllowance001" decimals="INF" unitRef="EUR">400.00</ix:nonFraction>
+      <ix:nonFraction name='bd-i-ext2:ReferenceIncome' contextRef="CD_Declarant" decimals="INF" unitRef="EUR">16000</ix:nonFraction>
+      <ix:nonFraction name='bd-i-ext2:ReferenceIncome' contextRef="CD_Inhabitant_RentAllowance001" decimals="INF" unitRef="EUR">0</ix:nonFraction>
+      <ix:nonFraction name='bd-i-ext2:ReferenceIncome' contextRef="CD_Partner_CareAllowance001" decimals="INF" unitRef="EUR">8000</ix:nonFraction>
+      <ix:nonFraction name='bd-i-ext2:ReferenceIncome' contextRef="CD_Partner_ChildRelatedBudget001" decimals="INF" unitRef="EUR">8000</ix:nonFraction>
+      <ix:nonFraction name='bd-i-ext2:ReferenceIncome' contextRef="CD_Partner_DayCareAllowance001" decimals="INF" unitRef="EUR">8000</ix:nonFraction>
+      <ix:nonFraction name='bd-i-ext2:ReferenceIncome' contextRef="CD_Partner_DayCareAllowance002" decimals="INF" unitRef="EUR">8000</ix:nonFraction>
+      <ix:nonFraction name='bd-i-ext2:ReferenceIncome' contextRef="CD_Partner_DayCareAllowance003" decimals="INF" unitRef="EUR">8000</ix:nonFraction>
+      <ix:nonFraction name='bd-i-ext2:ReferenceIncome' contextRef="CD_Partner_RentAllowance001" decimals="INF" unitRef="EUR">8000</ix:nonFraction>
+      <ix:nonFraction name='bd-i-ext2:ServiceRecreationRoomCosts' contextRef="CD_Declarant_RentAllowance001" decimals="INF" unitRef="EUR">0.00</ix:nonFraction>
+      <!--    <ix:nonNumeric name='bd-i:Surname' contextRef="CD_Declarant">A F-OUT-HR-KI-KO-ZO-07-A001-01</ix:nonNumeric>-->
+      <ix:nonNumeric name='bd-i:Surname' contextRef="CD_Inhabitant_RentAllowance001">A F-OUT-HR-KI-KO-ZO-07-A001-03</ix:nonNumeric>
+      <ix:nonNumeric name='bd-i:Surname' contextRef="CD_Partner_CareAllowance001">A F-OUT-HR-KI-KO-ZO-07-A001-02</ix:nonNumeric>
+      <ix:nonNumeric name='bd-i:Surname' contextRef="CD_Partner_ChildRelatedBudget001">A F-OUT-HR-KI-KO-ZO-07-A001-02</ix:nonNumeric>
+      <ix:nonNumeric name='bd-i:Surname' contextRef="CD_Partner_DayCareAllowance001">A F-OUT-HR-KI-KO-ZO-07-A001-02</ix:nonNumeric>
+      <ix:nonNumeric name='bd-i:Surname' contextRef="CD_Partner_DayCareAllowance002">A F-OUT-HR-KI-KO-ZO-07-A001-02</ix:nonNumeric>
+      <ix:nonNumeric name='bd-i:Surname' contextRef="CD_Partner_DayCareAllowance003">A F-OUT-HR-KI-KO-ZO-07-A001-02</ix:nonNumeric>
+      <ix:nonNumeric name='bd-i:Surname' contextRef="CD_Partner_RentAllowance001">A F-OUT-HR-KI-KO-ZO-07-A001-02</ix:nonNumeric>
+      <ix:nonNumeric name="bd-i:TaxReturnMessageType" contextRef="CD_Algemeen">TL114</ix:nonNumeric>
+    </ix:hidden>
     <ix:references>
       <link:schemaRef xlink:type="simple" xlink:href="http://www.nltaxonomie.nl/nt13/bd/20190918/entrypoints/bd-rpt-tsl-sbt-2020.xsd"/>
     </ix:references>
-    <ix:hidden>
-      <ix:tuple name='bd-t-ext2:DayCareDataSpecification' tupleID='T1'/>
-      <ix:tuple name='bd-t-ext2:DayCareDataSpecification' tupleID='T3'/>
-      <ix:tuple name='bd-t-ext2:DayCareDataSpecification' tupleID='T5'/>
-      <ix:tuple name='bd-t:AddressPresentation' tupleID='T2'/>
-      <ix:tuple name='bd-t:AddressPresentation' tupleID='T4'/>
-      <ix:tuple name='bd-t:AddressPresentation' tupleID='T6'/>
-      <ix:tuple name='bd-t:AddressPresentation' tupleID='T8'/>
-      <ix:tuple name='bd-t-ext2:RentalObjectAddressPresentation' tupleID='T7'/>
-    </ix:hidden>
     <ix:resources>
       <xbrli:context id="CD_Algemeen">
         <xbrli:entity>
@@ -627,136 +760,6 @@
       <xbrli:unit id="PURE">
         <xbrli:measure>xbrli:pure</xbrli:measure>
       </xbrli:unit>
-
-      <bd-i-ext2:AccountingRent contextRef="CD_Declarant_RentAllowance001" decimals="INF" unitRef="EUR">400.00</bd-i-ext2:AccountingRent>
-      <!--    <bd-i-ext2:AllowanceStartDate contextRef="CD_Declarant_CareAllowance">2020-02-01</bd-i-ext2:AllowanceStartDate>-->
-      <!--    <bd-i-ext2:AllowanceStartDate contextRef="CD_Declarant_ChildRelatedBudget">2020-02-01</bd-i-ext2:AllowanceStartDate>-->
-      <!--    <bd-i-ext2:AllowanceStartDate contextRef="CD_Declarant_DayCareAllowance">2020-01-10</bd-i-ext2:AllowanceStartDate>-->
-      <!--    <bd-i-ext2:AllowanceStartDate contextRef="CD_Declarant_RentAllowance">2020-02-01</bd-i-ext2:AllowanceStartDate>-->
-      <!--    <bd-i-ext2:AllowanceYear contextRef="CD_Algemeen">2020</bd-i-ext2:AllowanceYear>-->
-      <bd-i-ext2:Caretakercosts contextRef="CD_Declarant_RentAllowance001" decimals="INF" unitRef="EUR">0.00</bd-i-ext2:Caretakercosts>
-      <bd-i-ext2:Cleaningcosts contextRef="CD_Declarant_RentAllowance001" decimals="INF" unitRef="EUR">0.00</bd-i-ext2:Cleaningcosts>
-      <bd-i-ext2:DayCareGuestParentsHourlyRateAverage contextRef="CD_Child_DayCareAllowance001" decimals="INF" unitRef="EUR">5.00</bd-i-ext2:DayCareGuestParentsHourlyRateAverage>
-      <bd-i-ext2:DayCareGuestParentsHourlyRateAverage contextRef="CD_Child_DayCareAllowance002" decimals="INF" unitRef="EUR">5.00</bd-i-ext2:DayCareGuestParentsHourlyRateAverage>
-      <bd-i-ext2:DayCareGuestParentsHourlyRateAverage contextRef="CD_Child_DayCareAllowance003" decimals="INF" unitRef="EUR">5.00</bd-i-ext2:DayCareGuestParentsHourlyRateAverage>
-      <bd-i-ext2:DayCareGuestParentsHoursTotal contextRef="CD_Child_DayCareAllowance001" decimals="INF" unitRef="PURE">100</bd-i-ext2:DayCareGuestParentsHoursTotal>
-      <bd-i-ext2:DayCareGuestParentsHoursTotal contextRef="CD_Child_DayCareAllowance002" decimals="INF" unitRef="PURE">100</bd-i-ext2:DayCareGuestParentsHoursTotal>
-      <bd-i-ext2:DayCareGuestParentsHoursTotal contextRef="CD_Child_DayCareAllowance003" decimals="INF" unitRef="PURE">100</bd-i-ext2:DayCareGuestParentsHoursTotal>
-      <bd-i-ext2:DisposalDate contextRef="CD_Declarant_CareAllowance">2020-03-06</bd-i-ext2:DisposalDate>
-      <bd-i-ext2:DisposalDate contextRef="CD_Declarant_ChildRelatedBudget">2020-03-06</bd-i-ext2:DisposalDate>
-      <bd-i-ext2:DisposalDate contextRef="CD_Declarant_DayCareAllowance">2020-03-06</bd-i-ext2:DisposalDate>
-      <bd-i-ext2:DisposalDate contextRef="CD_Declarant_RentAllowance">2020-03-06</bd-i-ext2:DisposalDate>
-      <bd-i-ext2:DisposalLevelType contextRef="CD_Declarant_CareAllowance">2</bd-i-ext2:DisposalLevelType>
-      <bd-i-ext2:DisposalLevelType contextRef="CD_Declarant_ChildRelatedBudget">2</bd-i-ext2:DisposalLevelType>
-      <bd-i-ext2:DisposalLevelType contextRef="CD_Declarant_DayCareAllowance">2</bd-i-ext2:DisposalLevelType>
-      <bd-i-ext2:DisposalLevelType contextRef="CD_Declarant_RentAllowance">2</bd-i-ext2:DisposalLevelType>
-      <!--    <bd-i-ext2:DisposalNumber contextRef="CD_Declarant_CareAllowance">781005553T2005133</bd-i-ext2:DisposalNumber>-->
-      <!--    <bd-i-ext2:DisposalNumber contextRef="CD_Declarant_ChildRelatedBudget">781005553T2005134</bd-i-ext2:DisposalNumber>-->
-      <!--    <bd-i-ext2:DisposalNumber contextRef="CD_Declarant_DayCareAllowance">781005553T2005131</bd-i-ext2:DisposalNumber>-->
-      <!--    <bd-i-ext2:DisposalNumber contextRef="CD_Declarant_RentAllowance">781005553T2005132</bd-i-ext2:DisposalNumber>-->
-      <bd-i-ext2:DisposalTypeMainLevel contextRef="CD_Algemeen" decimals="INF" unitRef="PURE">1</bd-i-ext2:DisposalTypeMainLevel>
-      <bd-i-ext2:DisposalYear contextRef="CD_Algemeen">2020</bd-i-ext2:DisposalYear>
-      <!--    <bd-i-ext2:DisposalYearAmount contextRef="CD_Declarant_CareAllowance" decimals="INF" unitRef="EUR">550</bd-i-ext2:DisposalYearAmount>-->
-      <!--    <bd-i-ext2:DisposalYearAmount contextRef="CD_Declarant_ChildRelatedBudget" decimals="INF" unitRef="EUR">911</bd-i-ext2:DisposalYearAmount>-->
-      <!--    <bd-i-ext2:DisposalYearAmount contextRef="CD_Declarant_DayCareAllowance" decimals="INF" unitRef="EUR">3433</bd-i-ext2:DisposalYearAmount>-->
-      <!--    <bd-i-ext2:DisposalYearAmount contextRef="CD_Declarant_RentAllowance" decimals="INF" unitRef="EUR">827</bd-i-ext2:DisposalYearAmount>-->
-      <bd-i-ext2:Energycosts contextRef="CD_Declarant_RentAllowance001" decimals="INF" unitRef="EUR">0.00</bd-i-ext2:Energycosts>
-      <bd-i-ext2:ExemptionIncomeHomeResideChild contextRef="CD_Inhabitant_RentAllowance001" decimals="INF" unitRef="EUR">0</bd-i-ext2:ExemptionIncomeHomeResideChild>
-      <bd-i-ext2:HabitatRent contextRef="CD_Declarant_RentAllowance001" decimals="INF" unitRef="EUR">0.00</bd-i-ext2:HabitatRent>
-      <!--    <bd-i-ext2:MessageAttribute contextRef="CD_Algemeen">7810.05.553.T.SC.20.2</bd-i-ext2:MessageAttribute>-->
-      <bd-i-ext2:MessageDecision contextRef="CD_Algemeen">U hebt (een deel van) dit jaar geen recht op toeslag, omdat uw toeslagpartner niet rechtmatig in Nederland verblijft.</bd-i-ext2:MessageDecision>
-      <bd-i-ext2:MessageEndDate contextRef="CD_Algemeen">2020-03-02</bd-i-ext2:MessageEndDate>
-      <bd-i-ext2:MessageStartDate contextRef="CD_Algemeen">2020-03-02</bd-i-ext2:MessageStartDate>
-      <bd-i-ext2:MonthlyAmount contextRef="CD_Child_ChildRelatedBudget001" decimals="INF" unitRef="EUR">82</bd-i-ext2:MonthlyAmount>
-      <bd-i-ext2:MonthlyAmount contextRef="CD_Child_DayCareAllowance001" decimals="INF" unitRef="EUR">294</bd-i-ext2:MonthlyAmount>
-      <bd-i-ext2:MonthlyAmount contextRef="CD_Child_DayCareAllowance002" decimals="INF" unitRef="EUR">0</bd-i-ext2:MonthlyAmount>
-      <bd-i-ext2:MonthlyAmount contextRef="CD_Child_DayCareAllowance003" decimals="INF" unitRef="EUR">294</bd-i-ext2:MonthlyAmount>
-      <bd-i-ext2:Name contextRef="CD_Child_ChildRelatedBudget001">A F-OUT-HR-KI-KO-ZO-07-A001-03</bd-i-ext2:Name>
-      <bd-i-ext2:Name contextRef="CD_Child_DayCareAllowance001">A F-OUT-HR-KI-KO-ZO-07-A001-03</bd-i-ext2:Name>
-      <bd-i-ext2:Name contextRef="CD_Child_DayCareAllowance002">A F-OUT-HR-KI-KO-ZO-07-A001-03</bd-i-ext2:Name>
-      <bd-i-ext2:Name contextRef="CD_Child_DayCareAllowance003">A F-OUT-HR-KI-KO-ZO-07-A001-03</bd-i-ext2:Name>
-      <bd-i-ext2:PartYearConclusion contextRef="CD_Declarant_DayCareAllowance002">U hebt (een deel van) dit jaar geen recht op toeslag, omdat uw toeslagpartner niet rechtmatig in Nederland verblijft.</bd-i-ext2:PartYearConclusion>
-      <bd-i-ext2:PartYearFinancialCapacity contextRef="CD_Declarant_CareAllowance001" decimals="INF" unitRef="EUR">24000</bd-i-ext2:PartYearFinancialCapacity>
-      <bd-i-ext2:PartYearFinancialCapacity contextRef="CD_Declarant_ChildRelatedBudget001" decimals="INF" unitRef="EUR">24000</bd-i-ext2:PartYearFinancialCapacity>
-      <bd-i-ext2:PartYearFinancialCapacity contextRef="CD_Declarant_DayCareAllowance001" decimals="INF" unitRef="EUR">24000</bd-i-ext2:PartYearFinancialCapacity>
-      <bd-i-ext2:PartYearFinancialCapacity contextRef="CD_Declarant_DayCareAllowance002" decimals="INF" unitRef="EUR">24000</bd-i-ext2:PartYearFinancialCapacity>
-      <bd-i-ext2:PartYearFinancialCapacity contextRef="CD_Declarant_DayCareAllowance003" decimals="INF" unitRef="EUR">24000</bd-i-ext2:PartYearFinancialCapacity>
-      <bd-i-ext2:PartYearFinancialCapacity contextRef="CD_Declarant_RentAllowance001" decimals="INF" unitRef="EUR">24000</bd-i-ext2:PartYearFinancialCapacity>
-      <bd-i-ext2:PartYearMonthlyAmount contextRef="CD_Declarant_CareAllowance001" decimals="INF" unitRef="EUR">50</bd-i-ext2:PartYearMonthlyAmount>
-      <bd-i-ext2:PartYearMonthlyAmount contextRef="CD_Declarant_ChildRelatedBudget001" decimals="INF" unitRef="EUR">82</bd-i-ext2:PartYearMonthlyAmount>
-      <bd-i-ext2:PartYearMonthlyAmount contextRef="CD_Declarant_DayCareAllowance001" decimals="INF" unitRef="EUR">294</bd-i-ext2:PartYearMonthlyAmount>
-      <bd-i-ext2:PartYearMonthlyAmount contextRef="CD_Declarant_DayCareAllowance002" decimals="INF" unitRef="EUR">0</bd-i-ext2:PartYearMonthlyAmount>
-      <bd-i-ext2:PartYearMonthlyAmount contextRef="CD_Declarant_DayCareAllowance003" decimals="INF" unitRef="EUR">294</bd-i-ext2:PartYearMonthlyAmount>
-      <bd-i-ext2:PartYearMonthlyAmount contextRef="CD_Declarant_RentAllowance001" decimals="INF" unitRef="EUR">75</bd-i-ext2:PartYearMonthlyAmount>
-      <bd-i-ext2:PlainRent contextRef="CD_Declarant_RentAllowance001" decimals="INF" unitRef="EUR">400.00</bd-i-ext2:PlainRent>
-      <bd-i-ext2:ReferenceIncome contextRef="CD_Declarant" decimals="INF" unitRef="EUR">16000</bd-i-ext2:ReferenceIncome>
-      <bd-i-ext2:ReferenceIncome contextRef="CD_Inhabitant_RentAllowance001" decimals="INF" unitRef="EUR">0</bd-i-ext2:ReferenceIncome>
-      <bd-i-ext2:ReferenceIncome contextRef="CD_Partner_CareAllowance001" decimals="INF" unitRef="EUR">8000</bd-i-ext2:ReferenceIncome>
-      <bd-i-ext2:ReferenceIncome contextRef="CD_Partner_ChildRelatedBudget001" decimals="INF" unitRef="EUR">8000</bd-i-ext2:ReferenceIncome>
-      <bd-i-ext2:ReferenceIncome contextRef="CD_Partner_DayCareAllowance001" decimals="INF" unitRef="EUR">8000</bd-i-ext2:ReferenceIncome>
-      <bd-i-ext2:ReferenceIncome contextRef="CD_Partner_DayCareAllowance002" decimals="INF" unitRef="EUR">8000</bd-i-ext2:ReferenceIncome>
-      <bd-i-ext2:ReferenceIncome contextRef="CD_Partner_DayCareAllowance003" decimals="INF" unitRef="EUR">8000</bd-i-ext2:ReferenceIncome>
-      <bd-i-ext2:ReferenceIncome contextRef="CD_Partner_RentAllowance001" decimals="INF" unitRef="EUR">8000</bd-i-ext2:ReferenceIncome>
-      <bd-i-ext2:ServiceRecreationRoomCosts contextRef="CD_Declarant_RentAllowance001" decimals="INF" unitRef="EUR">0.00</bd-i-ext2:ServiceRecreationRoomCosts>
-      <!--    <bd-i:Surname contextRef="CD_Declarant">A F-OUT-HR-KI-KO-ZO-07-A001-01</bd-i:Surname>-->
-      <bd-i:Surname contextRef="CD_Inhabitant_RentAllowance001">A F-OUT-HR-KI-KO-ZO-07-A001-03</bd-i:Surname>
-      <bd-i:Surname contextRef="CD_Partner_CareAllowance001">A F-OUT-HR-KI-KO-ZO-07-A001-02</bd-i:Surname>
-      <bd-i:Surname contextRef="CD_Partner_ChildRelatedBudget001">A F-OUT-HR-KI-KO-ZO-07-A001-02</bd-i:Surname>
-      <bd-i:Surname contextRef="CD_Partner_DayCareAllowance001">A F-OUT-HR-KI-KO-ZO-07-A001-02</bd-i:Surname>
-      <bd-i:Surname contextRef="CD_Partner_DayCareAllowance002">A F-OUT-HR-KI-KO-ZO-07-A001-02</bd-i:Surname>
-      <bd-i:Surname contextRef="CD_Partner_DayCareAllowance003">A F-OUT-HR-KI-KO-ZO-07-A001-02</bd-i:Surname>
-      <bd-i:Surname contextRef="CD_Partner_RentAllowance001">A F-OUT-HR-KI-KO-ZO-07-A001-02</bd-i:Surname>
-      <bd-i:TaxReturnMessageType contextRef="CD_Algemeen">TL114</bd-i:TaxReturnMessageType>
-      <bd-t-ext2:DayCareDataSpecification>
-        <bd-t:AddressPresentation>
-          <bd-i:HouseNumberNL contextRef="CD_Child_DayCareAllowance001" decimals="INF" unitRef="PURE">56</bd-i:HouseNumberNL>
-          <bd-i:PlaceOfResidenceNL contextRef="CD_Child_DayCareAllowance001">ALMERE POORT</bd-i:PlaceOfResidenceNL>
-          <bd-i:PostalCodeNL contextRef="CD_Child_DayCareAllowance001">1363GA</bd-i:PostalCodeNL>
-          <bd-i:StreetNameNL contextRef="CD_Child_DayCareAllowance001">Marco Poloroute</bd-i:StreetNameNL>
-        </bd-t:AddressPresentation>
-        <bd-i-ext2:DayCareHourlyRate contextRef="CD_Child_DayCareAllowance001" decimals="INF" unitRef="EUR">12.00</bd-i-ext2:DayCareHourlyRate>
-        <bd-i-ext2:DayCareHours contextRef="CD_Child_DayCareAllowance001" decimals="INF" unitRef="PURE">100</bd-i-ext2:DayCareHours>
-        <bd-i-ext2:DayCareIdentificationNumber contextRef="CD_Child_DayCareAllowance001">610069524</bd-i-ext2:DayCareIdentificationNumber>
-        <bd-i-ext2:DayCareInstitutionType contextRef="CD_Child_DayCareAllowance001">gastouderopvang</bd-i-ext2:DayCareInstitutionType>
-        <bd-i-ext2:DayCareName contextRef="CD_Child_DayCareAllowance001">De Wegwijzer</bd-i-ext2:DayCareName>
-        <bd-i-ext2:DayCareType contextRef="CD_Child_DayCareAllowance001">buitenschoolse opvang</bd-i-ext2:DayCareType>
-      </bd-t-ext2:DayCareDataSpecification>
-      <bd-t-ext2:DayCareDataSpecification>
-        <bd-t:AddressPresentation>
-          <bd-i:HouseNumberNL contextRef="CD_Child_DayCareAllowance002" decimals="INF" unitRef="PURE">56</bd-i:HouseNumberNL>
-          <bd-i:PlaceOfResidenceNL contextRef="CD_Child_DayCareAllowance002">ALMERE POORT</bd-i:PlaceOfResidenceNL>
-          <bd-i:PostalCodeNL contextRef="CD_Child_DayCareAllowance002">1363GA</bd-i:PostalCodeNL>
-          <bd-i:StreetNameNL contextRef="CD_Child_DayCareAllowance002">Marco Poloroute</bd-i:StreetNameNL>
-        </bd-t:AddressPresentation>
-        <bd-i-ext2:DayCareHourlyRate contextRef="CD_Child_DayCareAllowance002" decimals="INF" unitRef="EUR">12.00</bd-i-ext2:DayCareHourlyRate>
-        <bd-i-ext2:DayCareHours contextRef="CD_Child_DayCareAllowance002" decimals="INF" unitRef="PURE">100</bd-i-ext2:DayCareHours>
-        <bd-i-ext2:DayCareIdentificationNumber contextRef="CD_Child_DayCareAllowance002">610069524</bd-i-ext2:DayCareIdentificationNumber>
-        <bd-i-ext2:DayCareInstitutionType contextRef="CD_Child_DayCareAllowance002">gastouderopvang</bd-i-ext2:DayCareInstitutionType>
-        <bd-i-ext2:DayCareName contextRef="CD_Child_DayCareAllowance002">De Wegwijzer</bd-i-ext2:DayCareName>
-        <bd-i-ext2:DayCareType contextRef="CD_Child_DayCareAllowance002">buitenschoolse opvang</bd-i-ext2:DayCareType>
-      </bd-t-ext2:DayCareDataSpecification>
-      <bd-t-ext2:DayCareDataSpecification>
-        <bd-t:AddressPresentation>
-          <bd-i:HouseNumberNL contextRef="CD_Child_DayCareAllowance003" decimals="INF" unitRef="PURE">56</bd-i:HouseNumberNL>
-          <bd-i:PlaceOfResidenceNL contextRef="CD_Child_DayCareAllowance003">ALMERE POORT</bd-i:PlaceOfResidenceNL>
-          <bd-i:PostalCodeNL contextRef="CD_Child_DayCareAllowance003">1363GA</bd-i:PostalCodeNL>
-          <bd-i:StreetNameNL contextRef="CD_Child_DayCareAllowance003">Marco Poloroute</bd-i:StreetNameNL>
-        </bd-t:AddressPresentation>
-        <bd-i-ext2:DayCareHourlyRate contextRef="CD_Child_DayCareAllowance003" decimals="INF" unitRef="EUR">12.00</bd-i-ext2:DayCareHourlyRate>
-        <bd-i-ext2:DayCareHours contextRef="CD_Child_DayCareAllowance003" decimals="INF" unitRef="PURE">100</bd-i-ext2:DayCareHours>
-        <bd-i-ext2:DayCareIdentificationNumber contextRef="CD_Child_DayCareAllowance003">610069524</bd-i-ext2:DayCareIdentificationNumber>
-        <bd-i-ext2:DayCareInstitutionType contextRef="CD_Child_DayCareAllowance003">gastouderopvang</bd-i-ext2:DayCareInstitutionType>
-        <bd-i-ext2:DayCareName contextRef="CD_Child_DayCareAllowance003">De Wegwijzer</bd-i-ext2:DayCareName>
-        <bd-i-ext2:DayCareType contextRef="CD_Child_DayCareAllowance003">buitenschoolse opvang</bd-i-ext2:DayCareType>
-      </bd-t-ext2:DayCareDataSpecification>
-      <bd-t-ext2:RentalObjectAddressPresentation>
-        <bd-t:AddressPresentation>
-          <!--    <bd-i:HouseNumberNL contextRef="CD_Declarant_RentAllowance001" decimals="INF" unitRef="PURE">211</bd-i:HouseNumberNL>-->
-          <!--    <bd-i:PlaceOfResidenceNL contextRef="CD_Declarant_RentAllowance001">Amsterdam</bd-i:PlaceOfResidenceNL>-->
-          <!--    <bd-i:PostalCodeNL contextRef="CD_Declarant_RentAllowance001">1012XC</bd-i:PostalCodeNL>-->
-          <!--    <bd-i:StreetNameNL contextRef="CD_Declarant_RentAllowance001">Kalverstraat</bd-i:StreetNameNL>-->
-        </bd-t:AddressPresentation>
-      </bd-t-ext2:RentalObjectAddressPresentation>
     </ix:resources>
   </ix:header>
 </div>
